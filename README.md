@@ -1,2 +1,3 @@
 # Magverse
-![](https://i.imgur.com/2Ti7pBO.png)
+![](https://imgur.com/6DrbxoU)
+

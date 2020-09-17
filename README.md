@@ -1,2 +1,2 @@
 # MagVerse
-Read Magazines Right From Your Browser 
+Read Magazines right From Your browser 

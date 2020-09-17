@@ -1,0 +1,28 @@
+{
+  "name": "magverse",
+  "version": "1.0.0",
+  "description": "Read Magazine right from your browser",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MagVerse/MagVerse.git"
+  },
+  "author": "SJ",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/MagVerse/MagVerse/issues"
+  },
+  "homepage": "https://github.com/MagVerse/MagVerse#readme",
+  "devDependencies": {
+    "css-loader": "^4.3.0",
+    "sass": "^1.26.10",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
+  }
+}

@@ -1,2 +1,2 @@
 # MagVerse
-MagVerse Primary Code Base
+Read Magazines Right From Your Browser 

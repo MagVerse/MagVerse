@@ -5,6 +5,7 @@
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "webpack-dev-server --open",
     "build": "webpack"
   },
   "repository": {
@@ -18,11 +19,23 @@
   },
   "homepage": "https://github.com/MagVerse/MagVerse#readme",
   "devDependencies": {
+    "autoprefixer": "^10.0.0",
     "css-loader": "^4.3.0",
+    "exports-loader": "^1.1.0",
+    "node-sass": "^4.14.1",
+    "postcss": "^8.0.5",
+    "postcss-loader": "^4.0.2",
+    "precss": "^4.0.0",
     "sass": "^1.26.10",
     "sass-loader": "^10.0.2",
     "style-loader": "^1.2.1",
     "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "bootstrap": "^4.5.2",
+    "jquery": "^3.5.1",
+    "popper.js": "^1.16.1"
   }
 }

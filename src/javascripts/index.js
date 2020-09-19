@@ -1,3 +1,15 @@
 // import 'bootstrap';
+
+
 import '../scss/index.scss';
-console.log('I get called from index.js!');
+import test from '../home.html';
+
+ function component() {
+    const element = document.createElement('div');
+   
+    // element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+    element.innerHTML = test;
+    return element;
+  }
+  console.log(test);
+  document.body.appendChild(component());

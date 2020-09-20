@@ -1,5 +1,5 @@
 // import 'bootstrap';
-import '../scss/index.scss';
+import '../sass/index.sass';
 import nav from '../home.html';
 
  

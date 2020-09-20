@@ -1,15 +1,13 @@
 // import 'bootstrap';
-
-
 import '../scss/index.scss';
-import test from '../home.html';
+import nav from '../home.html';
 
- function component() {
-    const element = document.createElement('div');
-   
-    // element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.innerHTML = test;
-    return element;
+ 
+ function navbar() {
+   const element = document.createElement('header');
+   element.innerHTML = nav;
+   return element;
   }
-  console.log(test);
-  document.body.appendChild(component());
+  // console.log(nav);
+document.body.appendChild(navbar());
+ 

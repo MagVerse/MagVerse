@@ -1,7 +1,37 @@
-@import "~bootstrap/scss/bootstrap";
+// @import "node_modules/bootstrap/scss/functions";
+// @import "node_modules/bootstrap/scss/variables";
+// @import "node_modules/bootstrap/scss/mixins";
 
-$body-color: red;
+// @import "node_modules/bootstrap/scss/Navbar";
 
-body {
-  color: $body-color;
+@import "node_modules/bootstrap/scss/bootstrap";
+body{
+	margin : 0px;
+}
+nav {
+	height: 100px;
+}
+.navbar {
+	padding: 0px;
+}
+.navbar-brand {
+	padding: 0px;
+	margin : 0px;
+}
+ul {
+	font-size: 27px;
+}
+li {
+	padding: 20px 40px 20px 40px;
+}
+.navbar-nav {
+
+}
+.navbar-text {
+	font-size: 27px;
+}
+
+span {
+	cursor: pointer;
+   padding: 20px 40px 20px 40px;
 }

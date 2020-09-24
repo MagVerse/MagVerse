@@ -1,0 +1,68 @@
+@import "node_modules/bootstrap/scss/bootstrap"
+
+.auto-scroll-div
+  height: 500px
+  max-width: 620px
+  position: relative
+  overflow: hidden
+
+  > div
+    height: 1800px
+    width: 2526px
+    background: url(https://rocket.chat/wp-content/uploads/2020/05/join-community-610x1536.jpg.webp)
+    position: absolute
+    top: 0
+    left: 0
+
+  .mover-1
+    animation: moveSlideshow 10s linear infinite
+
+@keyframes moveSlideshow
+  100%
+    transform: translateY(-66.6666%)
+
+.second-col-open-source
+  color: #fff
+
+  h6
+    margin-top: 4rem
+    margin-bottom: 1rem
+
+  h2
+    margin-top: 1rem
+
+  .open-source-right-col-txt
+    display: inline-block
+    padding: 1rem 1.5rem 0 0
+    letter-spacing: 1px
+
+.col-lg-6
+  padding-left: 0
+
+.second-col-open-source
+  padding-left: 1.4rem
+
+.github-btn
+  padding-left: .9rem
+  padding-top: 1rem
+
+.git-icon
+  width: 50%
+  padding: .5rem 0rem
+  font-size: 1.2rem
+  float: left
+  background-color: #2f3f5a
+
+.git-view
+  width: 50%
+  padding: .5rem 2rem
+  font-size: 1.2rem
+  float: left
+  background-color: #384a66
+
+.github-btn .btn
+  padding: 0
+  color: #fff
+
+.open-source-row
+  background-color: #030C1A

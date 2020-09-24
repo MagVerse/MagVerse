@@ -1,15 +1,14 @@
 // import 'bootstrap';
 
 
-import '../scss/index.scss';
+import '../scss/index.sass';
 import test from '../home.html';
 
  function component() {
-    const element = document.createElement('div');
+    const open_source_element = document.createElement('div');
    
-    // element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-    element.innerHTML = test;
-    return element;
+  
+    open_source_element.innerHTML = test;
+    return open_source_element;
   }
-  console.log(test);
   document.body.appendChild(component());

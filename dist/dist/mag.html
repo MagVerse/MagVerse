@@ -1,0 +1,3581 @@
+<script id="handlebars-demo" type="text/x-handlebars-template">
+    <!doctype html>
+    <html style="height:100% !important;">
+        <head>
+    
+            <script type="text/javascript">
+            
+            </script>
+<meta utf="charset-8">
+<title>EXPLORE</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+<!-- FB open graph -->
+<meta property="og:title"
+    content="EXPLORE" />
+<meta property="og:type" content="website" />
+<meta property='og:image' content="https://imgur.com/VKT7EjJ.jpg" />
+<meta property="og:image:width" content="450" />
+<meta property="og:image:height" content="298" />
+<meta property="og:site_name" content="MagVerse" />
+<!-- <meta property="fb:admins" content="1148919556" />
+<meta property="fb:app_id" content="179098192144677" /> -->
+<meta property="og:description"
+    content="Read Explore - Oct 2020 digital edition on your iPad, iPhone, Android Devices & web from MagVerse Digital Newsstand" />
+<!-- <META HTTP-EQUIV="Access-Control-Allow-Origin"
+    CONTENT="https://akcdn.magzter.com/web/assets/newreader/extras/jquery-1.8.3.js"> -->
+<script type="text/javascript" src="https://akcdn.magzter.com/web/assets/newreader/extras/jquery-1.8.3.js"></script>
+<!--
+            <script type="text/javascript" src="//akcdn.magzter.com/web/assets/newreader/extras/jquery-3.2.0.min.js"></script>
+            <script type="text/javascript" src="//akcdn.magzter.com/web/assets/newreader/extras/jquery-migrate-1.4.1.min.js"></script>
+    -->
+<script type="text/javascript" src="https://akcdn.magzter.com/web/assets/newreader/js/swipe.js"></script>
+<script type="text/javascript" src="https://akcdn.magzter.com/web/assets/newreader/extras/modernizr.2.5.3.min.js">
+</script>
+<script type="text/javascript" src="https://akcdn.magzter.com/web/assets/newreader/lib/hash.js"></script>
+<script type="text/javascript" src="https://akcdn.magzter.com/web/assets/newreader/js/screenfull.js"></script>
+<script type="text/javascript" src="https://akcdn.magzter.com/images/new_mg/jquery.bxslider.js"></script>
+<script type="text/javascript" src="https://akcdn.magzter.com/images/new_mg/js/jquery.easing.1.3.js"></script>
+
+<link rel="stylesheet" type="text/css" href="https://akcdn.magzter.com/images/new_mg/jquery.bxslider.css">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel='stylesheet'
+    type='text/css'>
+<!-- <link rel="stylesheet" href="//akcdn.magzter.com/web/srz/assets/css/fonts.css"> -->
+<!-- <link rel="icon" href="//akcdn.magzter.com/web/favicon.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="//akcdn.magzter.com/web/favicon.ico" type="image/x-icon" />
+ --><link href="https://cdn.magzter.com/web/assets/viewer/reader/sample_style-v6.css" type="text/css" rel="stylesheet" />
+<!-- <link href="http://localhost/sample_style-v6.css" type="text/css" rel="stylesheet" /> -->
+<!-- <script type="text/javascript">
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r;
+      i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date();
+      a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0];
+      a.async = 1;
+      a.src = g;
+      m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-46680689-14', 'auto');
+    ga('send', 'pageview');
+  </script> -->
+<style>
+    #screenlayer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 11000;
+        display: none;
+    }
+
+    .promContainer {
+        max-height: 100%;
+        display: inline-block;
+        position: relative;
+        background: #2C2C2C;
+        top: 0px;
+        float: left;
+        height: 100%;
+        overflow: hidden;
+    }
+
+    /*.blurBG {*/
+        /*background: url("https://maghtml.magzter.com/data/7237/1462515692/thumb/thumb_1.jpg")*/ 
+      /*  background: url("https://imgur.com/VKT7EjJ.jpg") 
+        no-repeat center center;
+        background-size: contain;
+
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 0;
+
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        -webkit-filter: blur(10px);
+        -moz-filter: blur(10px);
+        -o-filter: blur(10px);
+        -ms-filter: blur(10px);
+        filter: blur(10px);
+    }*/
+
+   /* .blurCover {
+        position: absolute;
+        left: 0;
+        right: 0;
+        z-index: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        -moz-box-shadow: inset 5px 0px 15px #000;
+        -webkit-box-shadow: inset 5px 0px 15px #000;
+        box-shadow: inset 5px 0px 15px #000;
+    }*/
+
+    .posRel {
+        position: relative;
+    }
+
+    /* BX Slider Start */
+    .bx-wrapper {
+        /*max-width: 1200px !important;
+            padding: 10px 12px 22px 22px !important;*/
+        background-color: transparent !important;
+        min-height: 150px;
+        width: 90%;
+        min-width: 90%;
+        margin: 0 auto !important;
+    }
+
+    .bx-wrapper .bx-viewport {
+        min-height: 210px !important;
+        background: transparent !important;
+    }
+
+    .bx-viewport,
+    .bx-wrapper {
+        box-shadow: none !important;
+        border: none !important;
+    }
+
+    .bx-wrapper .bx-viewport .bx-prev {
+        left: 0px !important;
+        display: none;
+    }
+
+    .bx-wrapper .bx-viewport .bx-next {
+        right: 0px !important;
+        display: none;
+    }
+
+    .posRel .bx-controls-direction {
+        display: none !important;
+    }
+
+    .ac_ovrly {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 9;
+        background: -webkit-linear-gradient(top, rgba(153, 153, 153, 0) 0%, rgba(0, 0, 0, 0.60) 75%, rgba(0, 0, 0, 0.8) 100%);
+        background: -moz-linear-gradient(top, rgba(153, 153, 153, 0) 0%, rgba(0, 0, 0, 0.60) 75%, rgba(0, 0, 0, 0.8) 100%);
+        background: linear-gradient(top, rgba(153, 153, 153, 0) 0%, rgba(0, 0, 0, 0.60) 75%, rgba(0, 0, 0, 0.8) 100%);
+        background: -ms-linear-gradient(top, rgba(153, 153, 153, 0) 0%, rgba(0, 0, 0, 0.60) 75%, rgba(0, 0, 0, 0.8) 100%);
+    }
+
+    .ac_txt_p {
+        position: absolute;
+        bottom: 10px;
+        left: 10px;
+        width: 91%;
+        color: white;
+        font-size: 15px;
+        font-weight: 400;
+        z-index: 10;
+        line-height: 17px;
+        text-align: left;
+    }
+
+    .slider2 .slide {
+        max-width: 100px;
+        min-width: 100px;
+        /*max-height: 80px;
+            min-height: 80px;*/
+    }
+
+    .slide a {
+        text-decoration: none;
+    }
+
+    .ac_titl {
+        position: absolute;
+        left: 16px;
+        top: -8px;
+        z-index: 100;
+        font-family: hind, 'sans-serif';
+        font-size: 20px;
+        color: #adadad;
+        font-weight: 600;
+    }
+
+    .ac_wrap {
+        position: relative;
+    }
+
+    .bgGreen .bx-wrapper .bx-viewport {
+        background: #1ca896 !important;
+    }
+
+    .bgYellow .bx-wrapper .bx-viewport {
+        background: #f1ae40 !important;
+    }
+
+    .thumbHTML .bx-wrapper .bx-controls-direction a {
+        top: 30%;
+    }
+
+    .promContainer .bx-wrapper {
+        padding-bottom: 0px !important;
+    }
+
+    /*.thumbnails.setMinHei{
+            min-height: 185px;
+            display: block !important;
+            bottom: 0px;
+        }
+        .thumbnails .bx-wrapper{
+            min-height: 140px;
+        }
+        .thumbnails .bx-wrapper .bx-viewport{
+            min-height: 140px !important;*/
+    /*overflow-y: hidden; !important;
+            overflow-x: auto !important;*/
+    /*}
+        .thumbnails .bx-wrapper .bx-pager{
+            display: none;
+            bottom: 0px;
+            padding-top: 0px;
+        }*/
+    /* BX Slider End */
+
+    h3.magTitle {
+        color: #272727;
+        font-family: Hind, sans-serif;
+        text-align: left;
+        margin-left: 10px;
+    }
+
+    h3.magTitle span {
+        color: #848484;
+    }
+
+    .heading {
+        font-family: Hind, sans-serif;
+        display: block;
+        text-align: left;
+        font-weight: 400;
+        color: #FFFFFF;
+        margin: 20px 0px 0px 5%;
+    }
+
+    .posRel {
+        width: 90%;
+        margin: 5% auto 0 auto;
+        overflow: hidden;
+    }
+
+    .posRel.subScri {
+        margin-top: 25%;
+    }
+
+    .subscribe_con {
+        width: 90%;
+        margin: 10px auto;
+        overflow: auto;
+        background: rgba(255, 255, 255, 0.3);
+    }
+
+    .magIMG {
+        width: 27%;
+        float: left;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .subscribe_btn {
+        width: 70%;
+        float: left;
+        margin: 0px;
+        padding: 0px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .magIMG img {
+        max-width: 100%;
+        display: inline;
+        vertical-align: middle;
+        height: auto !important;
+    }
+
+    .subscribe_btn button,
+    .subscribe_btn a {
+        background: #ef3e23;
+        outline: 0px;
+        border: 0px;
+        border-radius: 5px;
+        color: #FFFFFF;
+        padding: 5px 0px;
+        width: 70%;
+        margin: 0px 0px 10px 0px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 15px;
+        font-family: 'Hind', sans-serif;
+        display: block;
+        cursor: pointer;
+        letter-spacing: 1px;
+        text-decoration: none;
+    }
+
+    .subsControl {
+        width: 80%;
+        display: block;
+        margin: 0px auto 0 auto;
+        /*margin: 45px auto 0 auto;*/
+        position: absolute;
+        top: 50%;
+        left: 10%;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+    }
+
+    .subsControl p {
+        display: block;
+        color: #FFFFFF;
+        text-align: left;
+        font-size: 16px;
+        font-family: hind, 'sans-serif';
+        margin: 0px 0px 5px 0px;
+    }
+
+    .subsControl select {
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        outline: 0px;
+        border: 0px;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .subsControl select option {
+        font-family: hind, 'sans-serif';
+    }
+
+    .priceInfo {
+        display: block;
+        font-family: hind, 'sans-serif';
+        text-align: center;
+        margin: 0px 0px 10px 0px;
+    }
+
+    .priceInfo .curPrice {
+        font-size: 40px;
+        display: block;
+        color: #99cc33;
+        line-height: 40px;
+    }
+
+    .priceInfo .savePer {
+        font-size: 20px;
+        line-height: 20px;
+    }
+
+    .priceAndBtn {
+        display: none;
+    }
+
+
+    .posRel.subScri {
+        margin-top: 5%;
+    }
+
+    .mgSub .magIMG {
+        position: absolute;
+        height: 120px;
+        width: 120px;
+        top: 50%;
+        left: 2%;
+        border-radius: 150px;
+        -webkit-border-radius: 150px;
+        -moz-border-radius: 150px;
+    }
+
+    .mgSub .magIMG img {
+        margin-top: 0px;
+        transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -moz-transform: translateY(-50%);
+    }
+
+    .mgSub .subscribe_btn p {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .mgSub .subscribe_btn a {
+        background: #f7d402;
+        color: #594d0a;
+        font-weight: 500;
+        font-family: 'Hind', sans-serif;
+        text-decoration: none;
+    }
+
+    .subscribe_con {
+        position: relative;
+    }
+
+    .subscribe_btn {
+        float: right;
+    }
+
+    .mgCon .subscribe_con {
+        overflow: hidden;
+    }
+
+    .show-thumbnails {
+        width: 22px;
+    }
+
+    #share-tooltip {
+        background: #2c2c2c;
+    }
+
+    /*20-Sep End*/
+
+    @media (max-width: 1000px) {}
+
+    @media (max-width: 768px) {
+        .promContainer {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .bx-wrapper .bx-prev {
+            left: 0px !important;
+        }
+
+        .bx-wrapper .bx-next {
+            right: 0px !important;
+        }
+
+        .thumbnails>div.toggleThumb {
+            top: -25px;
+        }
+
+        .toggleThumb,
+        .thumbHTML {
+            margin-top: 0px !important;
+        }
+
+        .slider2 .slide {
+            max-width: 100px;
+            min-width: 100px;
+            max-height: 100px;
+            min-height: 100px;
+        }
+    }
+
+    @media (max-width: 767px) and (orientation: portrait) {
+        .readerTools {
+            top: 0px;
+            width: 160px;
+            left: 30%;
+            background: #2c2c2c;
+            height: 40px;
+            z-index: 1000;
+            /*2609*/
+            opacity: 0;
+        }
+
+        .fullScreen-icon {
+            left: 50px;
+            top: 10px;
+        }
+
+        .show-thumbnails {
+            top: 10px;
+            left: 90px;
+        }
+
+        .show-share {
+            top: 10px;
+            left: 130px;
+        }
+    }
+
+    @media only screen and (max-width : 600px) {
+        .subsControl {
+            padding-bottom: 0px;
+        }
+
+        .subscribe_btn button {
+            margin-bottom: 10px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .mgSub .magIMG {
+            height: 90px;
+            width: 90px;
+            /*top: 21%;*/
+        }
+
+        .mgSub .magIMG img {
+            /*margin-top: 34px;*/
+        }
+
+        .mgCon .subscribe_btn {
+            height: 132px !important;
+        }
+    }
+
+    @media (max-width: 380px) {
+        .mgSub .magIMG {
+            /*top: 16%;*/
+            left: 2%;
+        }
+
+        .mgSub .subscribe_btn p {
+            font-size: 11px;
+        }
+
+        .mgCon .subscribe_btn {
+            height: 132px !important;
+            margin: 0px auto 0px auto;
+            width: 67%;
+        }
+
+        .posRel.subScri {
+            margin-top: 0px;
+        }
+
+        .heading {
+            margin: 0px 0px 0px 5%;
+        }
+
+        .slider2 .slide {
+            max-width: 80px;
+            min-width: 80px;
+            max-height: 80px;
+            min-height: 80px;
+        }
+
+        .mgSub .subscribe_btn a {
+            margin-bottom: 0px;
+        }
+    }
+
+    @media (max-width: 350px) and (orientation: portrait) {
+        .readerTools {
+            top: 0px;
+            width: 100%;
+            left: 0%;
+        }
+
+        .fullScreen-icon {
+            left: 20%;
+        }
+
+        .show-thumbnails {
+            left: 40%;
+        }
+
+        .show-share {
+            left: 60%;
+        }
+
+        /*NEW*/
+        .subsControl p {
+            font-size: 14px;
+            margin: 5px 0px 5px 0px;
+            line-height: 16px;
+        }
+    }
+
+    /*2809*/
+    @media (max-width: 768px) and (orientation: landscape) {
+        .promContainer {
+            overflow-y: auto;
+        }
+
+        .mgSub .magIMG {
+            height: 70px;
+            width: 70px;
+        }
+
+        .posRel {
+            width: 100%;
+            margin: 0 auto 0 auto;
+        }
+
+        .subscribe_con {
+            width: 96%;
+            margin: 5px auto 0px auto;
+        }
+
+        .mgSub .subscribe_btn p {
+            font-size: 12px;
+            line-height: 16px;
+        }
+
+        .posRel.subScri {
+            margin-top: 1%;
+        }
+
+        .heading {
+            font-size: 15px;
+            margin: 5px 0px 0px 5%;
+        }
+
+        .posRel.relMagDIV {
+            display: none;
+        }
+
+        .posRel.subScri.mgCon .subscribe_con.mgSub {
+            height: 135px !important;
+        }
+
+        .posRel.subScri.mgCon .subscribe_con.mgSub .subscribe_btn {
+            height: 140px !important;
+        }
+
+        .subsControl p {
+            line-height: 16px;
+        }
+    }
+
+    .promContainer .bx-wrapper .bx-pager.bx-default-pager a {
+        background: rgba(52, 114, 176, 0.3);
+    }
+
+    .promContainer .bx-wrapper .bx-pager.bx-default-pager a:hover,
+    .promContainer .bx-wrapper .bx-pager.bx-default-pager a.active {
+        background: rgba(52, 114, 176, 1);
+    }
+
+    a.notNow {
+        color: #FFF;
+        text-align: center;
+        font-size: 16px;
+        text-decoration: none;
+    }
+
+    .thumbnails.thumbanils-touch {
+        display: none;
+    }
+
+    .ez_Notify {
+        position: absolute;
+        width: 100%;
+        background: #0099ff;
+        top: 0px;
+        text-align: center;
+        z-index: 1000;
+        height: 0px;
+        overflow: hidden;
+    }
+
+    .ez_Notify #ar_Link {
+        padding: 0px 0px 0px 60px;
+        background: url("pics/ezRead_icon_white.png") no-repeat left center;
+        text-decoration: none;
+        color: #FFFFFF;
+        font-family: "Hind", sans-serif;
+        font-size: 24px;
+        line-height: 34px;
+    }
+
+    .ez_Notify img.ez_noty_cls {
+        padding: 5px 0px;
+        display: inline;
+        float: right;
+        margin-right: 10px;
+        cursor: pointer;
+        width: 24px;
+    }
+
+    .ez_icon {
+        position: absolute;
+    }
+
+    .ez_icon.ezLeft {
+        top: 26%;
+        left: 14%;
+    }
+
+    .ez_icon.ezRight {
+        top: 26%;
+        right: 14%;
+    }
+
+    #canvas {
+        position: fixed;
+        top: 0px;
+        left: 0px;
+    }
+
+    .ad1 iframe {
+        border-width: 0px;
+    }
+
+    .intAd1 iframe {
+        border-width: 0px;
+    }
+
+    #dragNxt {
+        position: absolute;
+        right: 45%;
+        bottom: 0;
+        font-size: 14px;
+        color: #FFF;
+        text-transform: uppercase;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 100000;
+    }
+
+    #dragPrev {
+        position: absolute;
+        left: 100px;
+        bottom: 0;
+        font-size: 14px;
+        color: #FFF;
+        text-transform: uppercase;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 100000;
+        display: none;
+    }
+
+    #skipTo {
+        position: absolute;
+        right: 45%;
+        bottom: 0;
+        font-size: 14px;
+        color: #FFF;
+        text-transform: uppercase;
+        padding: 10px 20px;
+        background: rgba(0, 0, 0, 0.5);
+        z-index: 100000;
+    }
+
+    img.showAd_thumb {
+        max-width: 90px;
+        max-height: 117px;
+    }
+
+    .readerTools {
+        z-index: 11001;
+    }
+
+    #rotate{
+  vertical-align:top;
+    transform:rotate(7deg);
+  -ms-transform:rotate(90deg); /* IE 9 */
+  -moz-transform:rotate(90deg); /* Firefox */
+  -webkit-transform:rotate(90deg); /* Safari and Chrome */
+  -o-transform:rotate(90deg); /* Opera */
+    }
+/*Subscribe Newsletter Modal*/
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 9999;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+#popup1 {
+    font-family: poppins;
+}
+
+#popup1 .popup {
+    margin: 0px auto;
+    padding: 50px 20px;
+    background: #fff;
+    border-radius: 0px;
+    height: 260px;
+    width: 690px;
+    position: relative;
+    text-align: center;
+    top: 50% !important;
+    position: fixed !important;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    right: 0px;
+    left: 0;
+}
+
+#popup1 .popup h2 {
+    margin-top: 0;
+    color: #333;
+}
+
+#popup1 .popup .close {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    transition: all 200ms;
+    font-size: 30px;
+    font-weight: normal;
+    text-decoration: none;
+    text-align: center;
+    background: #333;
+    border-radius: 0;
+    cursor: pointer;
+    float: right;
+    padding: 0;
+    color: #fff;
+    margin-top: 0;
+    margin-right: 0;
+    height: 40px;
+    width: 40px;
+    line-height: 45px;
+}
+
+#popup1 .popup .close:hover {
+    color: #f2ed0d;
+}
+
+#popup1 .popup .content {
+    max-height: 30%;
+    overflow: auto;
+}
+
+#popup1 .newletter-title h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #000;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin: 0 0 15px;
+}
+
+#popup1 .box-content label {
+    font-weight: 400;
+    max-width: 560px;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 26px;
+}
+
+.newletter-popup {
+    background: #fff;
+    top: 50% !important;
+    position: fixed !important;
+    padding: 0;
+    text-align: center;
+    -moz-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#popup1 #frm_subscribe #subscribe_pemail {
+    background: #EBEBEB none repeat scroll 0% 0%;
+    border: medium none;
+    height: 40px;
+    width: 65%;
+    margin: 20px 0;
+    padding-left: 15px;
+}
+
+#popup1 #frm_subscribe a {
+    cursor: pointer;
+    border: none;
+    background: #333;
+    padding: 3px 25px;
+    text-transform: uppercase;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    line-height: 34px;
+    display: inline-block;
+    border-radius: 0;
+    letter-spacing: 2px;
+}
+
+#popup1 .box-content .subscribe-bottom {
+    margin-top: 20px;
+}
+
+#popup1 .box-content .subscribe-bottom #newsletter_popup_dont_show_again {
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+    margin-top: -1px;
+}
+
+#popup1 .box-content .subscribe-bottom label {
+    margin: 0;
+    font-weight: 400;
+    max-width: 650px;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 12px;
+}
+</style>
+<style>
+    /*.searchMegz {position: absolute;z-index: 1002;height: 22px;top:-25px;left: 10px;}
+        .searchMegz span.iconbig {cursor: pointer;background: url(http://akcdn.magzter.com/web/assets/newreader/pics/search-iconbig.png) no-repeat 0 0;width: 22px;height: 23px;display: inline-block;}
+        .searchMegz span.iconbig:hover {background: url(http://akcdn.magzter.com/web/assets/newreader/pics/search-iconbig-hover.png) no-repeat 0 0;}
+        .searchInputs {position: relative;}
+        .searchInputs .group{position:absolute;left:-400px;top:-32px;}
+        .searchInputs .group input.inputSearch{width:290px;outline: none;border: 1px solid #ddd;border-width: 1px 1px 0 0;height:20px;position: relative;color: #333;font-size: 14px;padding: 5px 30px;font-family:sans-serif;border-radius: 5px;}
+        .searchInputs .group input.inputSearch::placeholder{color:#333}
+        .searchInputs .group span.searchIconRight{cursor: pointer;background: url(http://akcdn.magzter.com/web/assets/newreader/pics/search-iconsmall.png) no-repeat 0 0;width:17px;height:17px;display: inline-block;position: absolute;right: 10px;top: 50%;transform: translateY(-50%);}
+        .searchedInfoValues {background: #fff;width:330px;color: #000;padding: 10px 10px 5px;border-radius: 5px;height: 290px;overflow-y: auto;}
+        .searchedInfoValues ul {margin: 0;padding: 0 5px;list-style: none;}
+        .searchedInfoValues ul li {padding: 10px 0 5px;border: 1px solid #ddd;border-width:0 0 1px;}
+        .searchedInfoValues ul li:last-child{border:0;}
+        .searchedInfoValues ul li a {font-size:14px;font-family:sans-serif;text-decoration: none;}
+        .searchedInfoValues ul li a span.Discname {font-family:sans-serif;display: block;font-weight: bold;font-style: normal;font-size: inherit;color: #333;}
+        .searchedInfoValues ul li.noKeywordMatch span{font-size: 20px !important; line-height: 30px !important;text-align: center;position: absolute;top: 50%;transform: translateY(-50%) translateX(-50%);left: 50%;}
+        .searchedInfoValues ul li a span.clr {padding: 5px 0;color: #000;font-size: 13px;display: inline-block;line-height: 16px;}
+        .searchedInfoValues ul li a span.clr em {font-weight: bold;font-style: normal;font-size: inherit;color: #ff733f;}
+        .overlay {background: #000;position: fixed;height: 100%;width: 100%;left: 0;right: 0;bottom: 0;top: 0;z-index:1010;opacity: 0.5;display:none;}
+        .searchInputs .group span.backIcon {font-size: 28px;color: #9d9d9d;position: absolute;left: 5px;top: 50%;transform: translateY(-50%) rotate(180deg);line-height: 15px;height: 21px;width: 20px;text-align: center;cursor: pointer;}
+        @media(max-width:767px){
+        .searchedInfoValues {overflow-y: auto;height: 225px;}
+        }*/
+    .searchMegz {
+        width: 22px;
+        position: absolute;
+        left: 10px;
+        top: -25px;
+        z-index: 1024;
+        cursor: pointer;
+    }
+
+    .searchMegz .fa {
+        font-size: 22px;
+        color: #868686;
+    }
+
+    .searchMegz .fa:hover {
+        color: #3472b0;
+    }
+
+    .searchMegz a .fa {
+        margin: 10px;
+        width: 22px;
+        text-align: center;
+    }
+
+    .searchInputs {
+        position: relative;
+    }
+
+    .searchInputs .group {
+        position: absolute;
+        left: -550px;
+        top: -32px;
+        /*box-shadow:0 3px 5px #ddd*/
+    }
+
+    .searchInputs .group input.inputSearch {
+        width: 290px;
+        outline: none;
+        border: 1px solid #ddd;
+        border-width: 1px 1px 0 0;
+        height: 20px;
+        position: relative;
+        color: #333;
+        font-size: 14px;
+        padding: 5px 30px;
+        font-family: sans-serif;
+        border-radius: 5px;
+    }
+
+    .searchInputs .group input.inputSearch::placeholder {
+        color: #333
+    }
+
+    .searchInputs .group span.searchIconRight {
+        cursor: pointer;
+        /*background: url(http://akcdn.magzter.com/web/assets/newreader/pics/search-iconsmall.png) no-repeat 0 0;*/
+        width: 17px;
+        height: 17px;
+        display: inline-block;
+        position: absolute;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .searchInputs .group span.searchIconRight .fa-search {
+        font-size: 15px;
+    }
+
+    .searchedInfoValues {
+        background: #fff;
+        width: 330px;
+        color: #000;
+        padding: 10px 10px 5px;
+        /*border-top:2px solid #ddd;box-shadow: 1px 0 5px #ddd;*/
+        border-radius: 5px;
+        height: 260px;
+        overflow-y: auto;
+    }
+
+    .searchedInfoValues ul {
+        margin: 0;
+        padding: 0 5px;
+        list-style: none;
+    }
+
+    .searchedInfoValues ul li {
+        padding: 10px 0 5px;
+        border: 1px solid #ddd;
+        border-width: 0 0 1px;
+    }
+
+    .searchedInfoValues ul li:last-child {
+        border: 0;
+    }
+
+    .searchedInfoValues ul li a {
+        font-size: 14px;
+        font-family: sans-serif;
+        text-decoration: none;
+    }
+
+    .searchedInfoValues ul li a span.Discname {
+        font-family: sans-serif;
+        display: block;
+        font-weight: bold;
+        font-style: normal;
+        font-size: inherit;
+        color: #333;
+    }
+
+    .searchedInfoValues ul li.noKeywordMatch span {
+        font-size: 20px !important;
+        line-height: 30px !important;
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        left: 50%;
+    }
+
+    .searchedInfoValues ul li a span.clr {
+        padding: 5px 0;
+        color: #000;
+        font-size: 13px;
+        display: inline-block;
+        line-height: 16px;
+        position: static;
+        top: 0;
+        transform: inherit;
+        left: 0;
+    }
+
+    .searchedInfoValues ul li a span.clr em {
+        font-weight: bold;
+        font-style: normal;
+        font-size: inherit;
+        color: #ff733f;
+    }
+
+    .overlay {
+        background: #000;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        top: 0;
+        z-index: 1010;
+        opacity: 0.5;
+        display: none;
+    }
+
+    .searchInputs .group span.backIcon {
+        font-size: 28px;
+        color: #9d9d9d;
+        position: absolute;
+        left: 5px;
+        top: 50%;
+        transform: translateY(-50%) rotate(180deg);
+        line-height: 15px;
+        height: 21px;
+        width: 20px;
+        text-align: center;
+        cursor: pointer;
+    }
+
+    @media(max-width:767px) {
+        .searchedInfoValues {
+            overflow-y: auto;
+            height: 225px;
+        }
+    }
+</style>
+<link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script type="text/javascript">
+    // var clevertap = {
+    //     event: [],
+    //     profile: [],
+    //     account: [],
+    //     onUserLogin: [],
+    //     notifications: []
+    // };
+    // clevertap.account.push({
+    //     "id": "8RK-ZK5-8Z5Z"
+    // });
+    // (function () {
+    //     var wzrk = document.createElement('script');
+    //     wzrk.type = 'text/javascript';
+    //     wzrk.async = true;
+    //     wzrk.src = ('https:' == document.location.protocol ? 'https://d2r1yp2w7bby2u.cloudfront.net' :
+    //         'http://static.clevertap.com') + '/js/a.js';
+    //     var s = document.getElementsByTagName('script')[0];
+    //     s.parentNode.insertBefore(wzrk, s);
+    // })();
+</script>
+<script>
+    if (!Array.prototype.find) {
+        Object.defineProperty(Array.prototype, 'find', {
+            value: function (predicate) {
+                // 1. Let O be ? ToObject(this value).
+                if (this == null) {
+                    throw new TypeError('"this" is null or not defined');
+                }
+
+                var o = Object(this);
+
+                // 2. Let len be ? ToLength(? Get(O, "length")).
+                var len = o.length >>> 0;
+
+                // 3. If IsCallable(predicate) is false, throw a TypeError exception.
+                if (typeof predicate !== 'function') {
+                    throw new TypeError('predicate must be a function');
+                }
+
+                // 4. If thisArg was supplied, let T be thisArg; else let T be undefined.
+                var thisArg = arguments[1];
+
+                // 5. Let k be 0.
+                var k = 0;
+
+                // 6. Repeat, while k < len
+                while (k < len) {
+                    // a. Let Pk be ! ToString(k).
+                    // b. Let kValue be ? Get(O, Pk).
+                    // c. Let testResult be ToBoolean(? Call(predicate, T, « kValue, k, O »)).
+                    // d. If testResult is true, return kValue.
+                    var kValue = o[k];
+                    if (predicate.call(thisArg, kValue, k, o)) {
+                        return kValue;
+                    }
+                    // e. Increase k by 1.
+                    k++;
+                }
+
+                // 7. Return undefined.
+                return undefined;
+            },
+            configurable: true,
+            writable: true
+        });
+    }
+</script>
+</head>
+
+<body>
+
+
+    <div id="canvas">
+        
+        <div class="readerTools">
+            <div class="zoom-icon zoom-icon-in" title="Zoom In"></div>
+            <div class="fa fa-thumbs-o-up like" style=" padding-top: 48px; padding-left: 9px; font-size: 30px; cursor: pointer; color:gray" title="Like"></div>
+            <span class="like-count" style="color:grey"></span>
+<!--             <div class="fullScreen-icon enter" title="Fullscreen"></div>
+ -->            <div class="show-thumbnails" style="margin-top: 9px"title="Thumbnails"></div>
+        <div class="show-share" style="padding-top:9px;" title="Share">
+                <i class="fa fa-share-alt" id="swShareBtn" title="Share" aria-hidden="true"></i>
+            <a href="#popup1" class="button-container" style="padding-left:1300px">
+            <input type="button" value="Subscribe" id="rotate"/>
+            </a>
+            <!-- <a class="btn btn-primary skip" href="#popup1" style="padding:6px 15px; background:#333; color:#fff; text-decoration:none; font-family:poppins; border-radius:3px; margin:25% 40%; display:inline-block;">OPEN POPUP</a> -->
+                <div id="share-tooltip">
+                    <a onclick="addThisStaticEventHandler('Facebook');"
+                        href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=`https://www.magzter.com/page_track/magenc/preview/$7237/$`;&amp;pubid=ra-5208e2cf54cfbd32&amp;ct=1&amp;pco=tbxnj-1.0"
+                        target="_blank">
+                        <i class="fa fa-facebook" id="swShare_FB" title="Facebook" aria-hidden="true"></i>
+                    </a>
+                    <a onclick="addThisStaticEventHandler('Twitter');"
+                        href="https://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=`https://www.magzter.com/page_track/magenc/preview/$7237/$`&amp;pubid=ra-5208e2cf54cfbd32&amp;ct=1&amp;title=Outlook SPLURGE - April 2016 </a> Digital Magazine from Magzter - World's Largest Digital Newsstand&amp;pco=tbxnj-1.0"
+                        target="_blank">
+                        <i class="fa fa-twitter" id="swShare_Tw" title="Twitter" aria-hidden="true"></i>
+                    </a>
+                    <a onclick="addThisStaticEventHandler('Mail to Friend');"
+                        href="mailto:?&amp;subject=Outlook SPLURGE</a> from Magzter&amp;body=I%E2%80%99m%20sharing%20a%20premium%20magazine%20article%20from%20Magzter%20with%20you%20because%20I%20think%20you%E2%80%99ll%20really%20like%20it!%20-%20`https://www.magzter.com/page_track/magenc/preview/$7237/$`">
+                        <i class="fa fa-envelope-o" id="swShare_Mail" title="Mail to Friend" aria-hidden="true"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="overlay"></div>
+        <div class="magazine-viewport" style="z-index: 999;">
+            <div class="container">
+                <div class="magazine">
+                    <div ignore="1" class="next-button"></div>
+                    <div ignore="1" class="previous-button"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="thumbnails">
+            <div class="toggleThumb">
+                <i class="fa fa-caret-up" id="togThumbTrig" title="Show Thumbnails" aria-hidden="true"></i>
+            </div>
+            <div class="thumbHTML">
+            </div>
+        </div>
+    </div>
+    <div id="popup1" class="overlay">
+  <div class="popup"> <a class="close" href="#">&times;</a>
+    <div id="dialog" class="window">
+      
+      <div class="box">
+        <div class="newletter-title">
+          <h2>Subscribe to our Featured Magazine</h2>
+        </div>
+        <div class="box-content newleter-content">
+          <label>Subscribe to our newsletters now and stay up-to-date with new collections, the latest lookbooks and exclusive magazines.</label>
+          <div id="frm_subscribe">
+            <form name="subscribe" id="subscribe_popup">
+              <div>
+                <!-- <span class="required">*</span><span>Email</span>-->
+                <input type="text" value="" name="subscribe_pemail" id="subscribe_pemail">
+                <input type="hidden" value="" name="subscribe_pname" id="subscribe_pname">
+                <div id="notification"></div>
+                <a class="button" onclick="email_subscribepopup()"><span>Submit</span></a> </div>
+            </form>
+        </div>
+          <!-- /#frm_subscribe -->
+        </div>
+        <!-- /.box-content -->
+      </div>
+    </div>
+  </div>
+</div>
+
+    <div id="loader"></div>
+
+    <style type="text/css">
+        .magazine-viewport .page img {
+            width: 100%;
+            max-width: 100%;
+            height: 100%;
+        }
+
+        #loader {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            background: #2c2c2c;
+            z-index: 10000;
+        }
+        
+        
+        
+    </style>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
+    <script type="text/javascript" src="https://akcdn.magzter.com/web/assets/js/jquery.jcryption.3.0.1.js"></script>
+    <script>
+       
+        // var password = $.jCryption.encrypt("XXXX", "turbo");
+        // $.jCryption.authenticate(password, "https://www.magzter.com/page_track_v2/magenc?pk=1",
+        //     "https://www.magzter.com/page_track_v2/magenc?hs=1",
+        //     function (AESKey) {
+        //         //
+        //     },
+        //     function () {
+        //         console.log("Authentication failed");
+        //     });
+    var d = new Date();
+    var hhour = d.getHours();
+    var day = d.getDay();
+    if('0' != 100){
+    let query = {
+      magid: '7237',
+      magname: 'Outlook SPLURGE',
+      maglang: 'English',
+      priCat: '12',
+      secCat : '0',
+      magCon: 'IN',
+      isGold: '1',
+      issid: '165107',
+      uid: '15860691',
+      readtype: '5',
+      device: "web",
+      os: "web",
+      con: 'IN',
+      formattype: "1",
+      orientation: "Landscape",
+      isinteractive: "0",
+      gender: "0",
+      App: "Magzter",
+      ageRate: '3',
+      isnewsstand: '0',
+      islatest: "0",
+      hour: d.getHours(),
+      day: d.getDay(),
+      clevertap_id:'62deb176d8754ffeb173df8075b8e049'
+    }
+
+        var socket;
+        var pending_pages = [];
+
+        function connect() {
+            if (!"WebSocket" in window) {
+                console.error("WebSocket is not supported by your Browser!");
+                return;
+            }
+            if (socket && socket.readyState == WebSocket.OPEN) {
+                return;
+            }
+            // Let us open a web socket
+            socket = new WebSocket("wss://analytics.magzter.com?" + $.param(query));
+            socket.onerror = function (err) {
+                console.error(err);
+            }
+            socket.onopen = function (err) {
+                pending_pages.forEach(page => {
+                    socket.send(JSON.stringify({
+                        action: "pagestream",
+                        page: page
+                    }));
+                })
+                pending_pages = [];
+            }
+            socket.onclose = function (err) {
+                console.error("DISCONNECTED");
+            }
+            socket.onmessage = function (reason) {
+                console.error(reason);
+            }
+        }
+
+        $(window).on('pagehide', windowBlurred);
+        $(window).on('pageshow', windowFocused);
+        $(window).on('blur', windowBlurred);
+        $(window).on('focus', windowFocused);
+
+        let socketTimeout;
+
+        function windowBlurred() {
+            if (socketTimeout) {
+                clearTimeout(socketTimeout);
+            }
+            socketTimeout = setTimeout(function () {
+                socket.close()
+            }, 60000)
+        }
+
+        function windowFocused() {
+            if (socketTimeout) {
+                clearTimeout(socketTimeout);
+            }
+            if (socket && (socket.readyState == WebSocket.CLOSING || socket.readyState == WebSocket.CLOSED)) {
+                connect();
+            }
+        }
+        connect();
+
+        function trackPage(page, pos) {
+            let Page_no=[page];
+            if(pos === 'l'){
+                pos =2;//page+1
+                Page_no.push(page+1);
+            }
+            else{
+                pos =1;
+            }
+            Page_no = Page_no.join(",");
+            if (!socket || socket.readyState != WebSocket.OPEN) {
+                pending_pages.push(Page_no);
+            } else {
+                socket.send(JSON.stringify({
+                    action: "pagestream",
+                    page: Page_no,
+                    pos: pos
+                }));
+            }
+
+        }
+    }
+
+        // function trackPage(page, pos) {
+        //     console.log(page);
+        //     if (socket)
+        //         socket.emit('pagestream', page);
+
+        //     // var org_data = "mag_id=7237&iss_id=165107&page_type=reader&page_no=" + page +
+        //     //     "&reader_type=html5&pos=" + pos;
+        //     // jQuery.ajax({
+        //     //     type: "POST",
+        //     //     async: false,
+        //     //     url: "https://www.magzter.com/page_track_v2/pageStream",
+        //     //     //data: {mag_id:'7237',iss_id:'165107',page_type:'<?php echo $page_type;?>',page_no:page,'reader_type':"html5",'pos':pos},
+        //     //     //data: { mag_enc:$.jCryption.encrypt(org_data, password), <?php echo $this->security->get_csrf_token_name().":'".$this->security->get_csrf_hash()."'";?> },
+        //     //     data: org_data,
+        //     //     success: function (msg) {
+        //     //         console.log(msg);
+        //     //     }
+        //     // });
+        // }
+
+        $(window).load(function () {
+            $("#loader").hide();
+            
+        });
+      
+
+        // var userIsEditingSomething; // set this if something crazy happens
+        //     oldOnBeforeUnload = window.onbeforeunload;
+
+        // window.onbeforeunload = function () {
+        //     // attempt to handle a previous onbeforeunload
+        //     if ('function' === typeof oldOnBeforeUnload) {
+        //         var message = oldOnBeforeUnload();
+        //         if ('undefined' !== typeof message) {
+        //             if (confirm('string' === typeof message ? message : 'Are you sure you want to leave this page?')) {
+        //                 // return trackPage('end',''); // allow user to exit without further annoying pop-ups
+        //             }
+        //         }
+        //     }
+        //     // handle our own
+        //     if (userIsEditingSomething) {
+        //         return 'Are you sure you want to exit?';
+        //     }
+        //     trackPage('end','');
+        //     return false;
+        // };
+
+
+    </script>
+
+    <script type="text/javascript">
+        var contains = function (needle) {
+            // Per spec, the way to identify NaN is that it is not equal to itself
+            var findNaN = needle !== needle;
+            var indexOf;
+
+            if (!findNaN && typeof Array.prototype.indexOf === 'function') {
+                indexOf = Array.prototype.indexOf;
+            } else {
+                indexOf = function (needle) {
+                    var i = -1,
+                        index = -1;
+
+                    for (i = 0; i < this.length; i++) {
+                        var item = this[i];
+
+                        if ((findNaN && item !== item) || item === needle) {
+                            index = i;
+                            break;
+                        }
+                    }
+
+                    return index;
+                };
+            }
+
+            return indexOf.call(this, needle) > -1;
+        };
+
+        var pageWidth, pageHeight, curPage, noOfPages, bxSliderVar, intGoToNxt, intGoToPrev, sig_R_dou, adData,
+            adRmvNxt, adRmvPrv, pageGlobal = 1;
+
+        /* tracking variables */
+        var campId,
+            adId,
+            usrId,
+            deviceModel = 0,
+            deviceOS = navigator.platform,
+            udid = 0,
+            campIntId,
+            magId,
+            adPageNo,
+            adSession,
+            isnews = 0,
+            usrConCode,
+            magCntry,
+            selStorId = 0,
+            adEventCount,
+            adUniqid = 0,
+            pubId,
+            issId;
+
+        if (window.matchMedia('(max-width: 1023px)').matches) {
+            sig_R_dou = "single";
+        } else {
+            sig_R_dou = "double";
+        }
+
+        var page_type = 'reader'; //(uri_string.indexOf("reader/")>-1)? "reader" : "preview";
+        var magDataURL = 'data/7237/1462515692/';
+        var fullJson = '0';
+        //for arabic mags rtl rest ltr
+        var getBookDirection = ('0' === '1') ? 'rtl' : 'ltr';
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            //close event
+            /*$(window).bind("beforeunload", function() {
+            	track_beforeunload();
+                return confirm("Do you really want to close.?");
+            });*/
+
+        });
+
+         
+
+        // function track_beforeunload() {
+        //     $.ajax({
+        //         type: "POST",
+        //         url: "https://www.magzter.com/get_json", //
+        //         data: {},
+        //     }).done(function (msg) {
+        //     });
+        // }
+        var linkSet = [];
+
+        // function getRegionsData(page, element) {
+        //     $.ajax({
+        //         type: "GET",
+        //         dataType: "jsonp",
+        //         url: 'https://maghtml.magzter.com/' + magDataURL + 'json/links.json',
+        //         jsonpCallback: "jsonCallback",
+        //         data: {
+        //             page_type: page_type
+        //         }
+        //     }).done(function (data) {
+        //         linkSet = data;
+        //     }).error(function (err) {})
+
+        // }
+
+        $(document).ready(function () {
+            //for full pdf changed if(fullJson==1){
+            if (fullJson != "") {
+                // getRegionsData();
+            }
+            $(window).load(function () {
+                setTimeout(function () {
+                    $("#canvas").show();
+                }, 500);
+            });
+
+            beforeLoadApp();
+
+            $(document).on('click touch', function () {
+                if (window.matchMedia('(max-width: 1023px)').matches) {
+
+                    $(".readerTools").css("opacity", "1");
+
+                    setTimeout(function () {
+                        if (!readerSearch.isOpen()) {
+                            $(".readerTools").animate({
+                                opacity: "0"
+                            }, 500);
+                        }
+                    }, 10000);
+
+                } else {
+                    $(".readerTools").css("opacity", "1");
+                }
+            });
+
+
+            $(".fullScreen-icon").click(function () {
+
+                var isItEnter = $(".fullScreen-icon").hasClass("enter");
+                if (isItEnter) {
+                    screenfull.request($('#canvas')[0]);
+
+                    $(".fullScreen-icon").removeClass("enter");
+                    $(".fullScreen-icon").attr("title", "Exit Fullscreen");
+                    $(".fullScreen-icon").addClass("exit");
+                } else {
+                    screenfull.exit();
+
+                    $(".fullScreen-icon").removeClass("exit");
+                    $(".fullScreen-icon").attr("title", "Fullscreen");
+                    $(".fullScreen-icon").addClass("enter");
+                }
+
+            });
+            //Like-Button Function
+            var likeCount = 0;
+            $(".like").click( function() {
+               $(".like").removeClass("fa-thumbs-o-up");
+               $(".like").addClass("fa-thumbs-up");
+               likeCount++;
+               $(".like-count").html(likeCount);
+
+            });
+            //Button Function
+            $(".button-container").click(function(){
+                $("#popup1").css("display","block");
+            });
+
+
+            $("#togThumbTrig, .show-thumbnails").click(function () {
+                $(".thumbnails").toggleClass("setMinHei");
+
+                var isThmShow = $(".thumbnails").hasClass("setMinHei");
+
+                if (isThmShow) {
+                    $("#togThumbTrig").removeClass("fa-caret-up");
+                    $("#togThumbTrig").addClass("fa-caret-down");
+                    $("#togThumbTrig").attr("title", "Hide Thumbnails");
+                } else {
+                    $("#togThumbTrig").removeClass("fa-caret-down");
+                    $("#togThumbTrig").addClass("fa-caret-up");
+                    $("#togThumbTrig").attr("title", "Show Thumbnails");
+                }
+            });
+
+            $("#swShareBtn").click(function () {
+                $("#share-tooltip").toggle("medium");
+            });
+
+            $(".magazine-viewport").click(function () {
+                $("#share-tooltip").hide("slow");
+                $(".thumbnails").removeClass("setMinHei");
+                $("#togThumbTrig").removeClass("fa-caret-down");
+                $("#togThumbTrig").addClass("fa-caret-up");
+                $("#togThumbTrig").attr("title", "Show Thumbnails");
+            });
+
+        });
+
+        function beforeLoadApp() {
+
+            var setCurPage = window.location.href;
+
+            if (setCurPage.indexOf("#page/") == -1) {
+                setCurPage += "#page/1";
+            }
+
+            curPage = setCurPage.split("/");
+            curPage = curPage[curPage.length - 1];
+            curPage = parseInt(curPage);
+
+            if (window.matchMedia('(min-width: 1023px)').matches) {
+
+                var isCurEven = isEven(curPage);
+
+                if (isCurEven) {
+                    curPage = curPage + 1;
+                }
+
+                curPage = curPage / 2;
+
+                curPage = Math.round(curPage);
+                curPage = curPage - 1;
+
+                if (curPage.length == 0) {
+                    curPage = 0;
+                } else if (isNaN(curPage)) {
+                    curPage = 0;
+                }
+
+            } else {
+                curPage = curPage - 1;
+            }
+
+            function isEven(n) {
+                return n % 2 == 0;
+            }
+            // var thmbURL = "https://maghtml.magzter.com/" + magDataURL + "thumb/thumb_";
+            var thmbURL = "https://emonvili.sirv.com/Explore-Thumbnails/";
+            /* $.ajax({
+                 type: "POST",
+                 url: 'https://www.magzter.com/get_json_v3/getImagestest',
+                 async: true,
+                 data: {
+                     page_type: page_type,
+                     frmPage: 1,
+                     file_path: magDataURL
+                 },
+             }).done(function (msg) {
+                 //first_page = msg;
+
+                 var data2 = $.parseJSON(msg);*/
+
+            noOfPages = '15';
+            noOfPages = Number(noOfPages) + 1;
+
+            var image1 = new Image();
+            image1.src = "https://maghtml.magzter.com/" + magDataURL + "jpg/1.jpg"; //data2.pagesAbsPath[1];
+
+
+            image1.onload = function () {
+
+                var img_Width = this.width,
+                    img_Height = this.height;
+
+                var gt_winHei = $(window).height();
+                var imgHei_Per = (((gt_winHei + 200) / (img_Height + 200)) * 100);
+
+                pageWidth = (img_Width / 100) * imgHei_Per;
+                pageHeight = (img_Height / 100) * imgHei_Per;
+
+                if (window.matchMedia('(max-width: 1023px)').matches) {
+                    sig_R_dou = "single";
+                    /*pageWidth = 687;
+                    pageHeight = 900;*/
+                    window.scrollTo(0, 1);
+                } else {
+                    sig_R_dou = "double";
+                    /*pageWidth = 1562;
+                    pageHeight = 1024;*/
+                    pageWidth = pageWidth * 2;
+                    pageHeight = pageHeight;
+                }
+
+                var magazineIdChk = '7237';
+                var chkUsr = '15860691';
+
+                if (page_type != "preview") {
+
+                    $.ajax({
+                        type: "GET",
+                        url: "https://ads.magzter.com/getAds_v2.php",
+                        async: true,
+                        dataType: "json",
+                        data: {
+                            mid: '7237',
+                            con: 'IN',
+                            ucon: '',
+                            lan: 'English',
+                            ulan: 'en',
+                            cat: '12',
+                            scat: '0',
+                            sid: '1',
+                            gender: '0',
+                            age: '0',
+                            os: deviceOS,
+                            dev: "web",
+                            uid: '15860691',
+                            issid: '165107',
+                            libid: '',
+                            dtype: '5',
+                            pid: '363',
+                            pubId: '363',
+                            mtype: '1'
+                        }
+                    }).done(function (data) {
+
+                        adData = data;
+
+                        ad_pages = [];
+                        thumb_After = 3;
+                        var pageFreqNo;
+
+                        pageFreqNo = parseInt(adData.pageFreq);
+
+                        var getCurrentDate = Number(new Date());
+                        getCurrentDate = getCurrentDate.toString();
+
+                        var currentDate = parseInt(getCurrentDate.slice(0, 10));
+
+                        for (var key in adData.interactives) {
+
+                            var ad_endDate = parseInt(adData.interactives[key].ed);
+                            var ad_stDate = parseInt(adData.interactives[key].st);
+
+                            if (ad_endDate > currentDate && ad_stDate < currentDate) {
+
+                                var li_d = $(".thumbHTML").find(".page-" + thumb_After).parent()
+                                    .clone();
+                                var li_d2 = $(li_d).html("<img src='" + (adData.interactives[
+                                            key].thumb == "" ?
+                                        "https://akcdn.magzter.com/web/assets/images/ad_thumb.jpeg" :
+                                        adData.interactives[key].thumb) + "' class='page-" +
+                                    thumb_After + " showAd_thumb' data-pageAfter='" +
+                                    thumb_After + "' data-campId='" + adData.interactives[
+                                        key].campid + "' data-adId='" + adData.interactives[
+                                        key].aid + "' data-cinterId='" + adData
+                                    .interactives[
+                                        key].interid + "' data-adURL='" + adData
+                                    .interactives[
+                                        key].unzippath + "/index.html?campid=" + adData
+                                    .interactives[
+                                        key].campid + "&interid=" + adData.interactives[key]
+                                    .interid + "&magid=" + '7237' +
+                                    "&platform=web'/><span>" + adData.interactives[key]
+                                    .title +
+                                    "</span>");
+                                $(".thumbHTML").find(".page-" + thumb_After).parent().after(
+                                    li_d2);
+
+                                ad_pages.push(thumb_After);
+                                thumb_After = thumb_After + pageFreqNo;
+                            }
+                        }
+
+                        loadApp();
+
+                    }).fail(function () {
+                        console.log("Ajax Failed");
+                        loadApp();
+                    });
+
+                } else {
+                    loadApp();
+                }
+
+                //loadApp(pageWidth, pageHeight);
+
+            };
+
+            first_page_cover = "https://maghtml.magzter.com/" + magDataURL +
+                "jpg/1.jpg"; //data2.pagesAbsPath[Object.keys(data2.pagesAbsPath)[0]];
+            // alert(first_page_cover)
+            $("body").append("<style>.blurBG{background: url(" + first_page_cover +
+                ") no-repeat center center;background-size:cover}</style>");
+            var obj = {};
+            if (page_type == "preview") {
+                let previewPage = []
+                previewPage = '';
+                let array = previewPage.split(',')
+                for (var i = 0; i < '15'; i++) {
+                    obj[i + 1] = array[i];
+                }
+                getThumb = obj;
+            } else {
+                for (var i = 1; i <= '15'; i++) {
+                    obj[i] = i;
+                }
+                getThumb = obj;
+            }
+            var thumbLength = noOfPages - 1;
+            var thumbNo = 1;
+            var getLastPageNum = getThumb[thumbLength];
+            var noOfLoop = (thumbLength - 2) / 2;
+            var setSlideWidth = 0;
+            // var thumb_HTML = '<ul><li class="i"><img src="' + thmbURL + getThumb[thumbNo] +
+            //     '.jpg" class="page-1"><span>1</span></li>';
+            var thumb_HTML = '<ul><li class="i"><img src="' + thmbURL + getThumb[thumbNo] +
+                '.png" class="page-1"><span>1</span></li>';
+            //Show Double
+            for (var thumbI = 0; thumbI < noOfLoop; thumbI++) {
+
+                if (sig_R_dou == "double") {
+
+                    setSlideWidth = 200;
+
+                    thumb_HTML += '<li class="d"><img src="' + thmbURL + getThumb[++thumbNo] +
+                        '.png" class="page-' + thumbNo + '"><img src="' + thmbURL + getThumb[++thumbNo] +
+                        '.png" class="page-' + thumbNo + '"><span>' + (thumbNo - 1) + '-' + thumbNo +
+                        '</span></li>';
+                }
+
+            }
+
+            //Showing Single
+            for (var thumbI = 0; thumbI < (thumbLength - 1); thumbI++) {
+
+                if (sig_R_dou == "single") {
+
+                    setSlideWidth = 100;
+
+                    thumb_HTML += '<li class="d"><img src="' + thmbURL + getThumb[++thumbNo] +
+                        '.png" class="page-' + thumbNo + '"><span>' + thumbNo + '</span></li>';
+                }
+            }
+
+            /*thumb_HTML += '<li class="i"><img src="'+thmbURL+getLastPageNum+'.jpg" class="page-'+thumbLength+'"><span>'+thumbLength+'</span></li></ul>';*/
+            if (sig_R_dou == "double") {
+                if (getLastPageNum % 2 == 0) {
+                    thumb_HTML += '<li class="i"><img src="' + thmbURL + getLastPageNum +
+                        '.png" class="page-' + thumbLength +
+                        '"><img src="http://d391aap0mzpb1y.cloudfront.net/web/assets/images/relArt_thumb.jpeg" class="page-' +
+                        (thumbLength + 1) + '"><span>' + thumbLength + '-' + (thumbLength + 1) +
+                        '</span></li></ul>';
+                } else {
+                    thumb_HTML +=
+                        '<li class="i"><img src="http://d391aap0mzpb1y.cloudfront.net/web/assets/images/relArt_thumb.jpeg" class="page-' +
+                        (thumbLength + 1) + '"><span>' + (thumbLength + 1) + '</span></li></ul>';
+                }
+            } else {
+                thumb_HTML +=
+                    '<li class="i"><img src="http://d391aap0mzpb1y.cloudfront.net/web/assets/images/relArt_thumb.jpeg" class="page-' +
+                    (thumbLength + 1) + '"><span>' + (thumbLength + 1) + '</span></li></ul>';
+            }
+
+            $(".thumbHTML").hide();
+
+            $(".thumbHTML").html(thumb_HTML);
+
+            if (getBookDirection == "rtl") {
+
+                var thumbUL = $(".thumbHTML ul");
+                thumbUL.children().each(function (i, li) {
+                    thumbUL.prepend(li)
+                });
+
+                if (curPage == 0) {
+                    curPage = ($(".thumbHTML ul li").size()) - 1;
+                } else {
+                    curPage = (($(".thumbHTML ul li").size()) - 1) - curPage;
+                }
+
+                runBXslider(curPage, setSlideWidth);
+            } else {
+                runBXslider(curPage, setSlideWidth);
+            }
+
+            // });
+
+            function runBXslider(stPage, setSlideWidth) {
+
+                var noOfMinMax_slides;
+                if (window.matchMedia('(max-width: 767px)').matches) {
+                    noOfMinMax_slides = 3;
+                } else if (window.matchMedia('(max-width: 1400px)').matches) {
+                    noOfMinMax_slides = 5;
+                } else {
+                    noOfMinMax_slides = 6;
+                }
+
+                bxSliderVar = $(".thumbHTML ul").bxSlider({
+                    slideWidth: setSlideWidth,
+                    slideMargin: 10,
+                    infiniteLoop: false,
+                    hideControlOnEnd: true,
+                    touchEnabled: true,
+                    swipeThreshold: 200,
+                    oneToOneTouch: true,
+                    preventDefaultSwipeX: false,
+                    minSlides: noOfMinMax_slides,
+                    maxSlides: noOfMinMax_slides
+                });
+
+            }
+
+        }
+
+        var nxt_KeyPress = document,
+            prv_KeyPress = document,
+            swiptCtrl = document,
+            dragNext, dragPrev, swiptLeft, swiptRight;
+        var skipNext, skipPrev, randomTxt;
+
+        var nxt_BtnPress = document.getElementsByClassName("next-button");
+        var prv_BtnPress = document.getElementsByClassName("previous-button");
+        var pgAfter, pgBefore, goFurther, thumb_After, curPage;
+        var ad_pages;
+
+        var first_page_cover = '';
+
+        function randomString(length, chars) {
+            var result = '';
+            for (var i = length; i > 0; --i) result += chars[Math.round(Math.random() * (chars.length - 1))];
+            return result;
+        }
+
+        function loadApp(pageWidth1, pageHeight1) {
+
+            $(".showAd_thumb").on("click", function (e) {
+                e.stopPropagation();
+
+                $(".thumbnails").removeClass("setMinHei");
+
+                var adURL = $(this).attr("data-adURL");
+                var pageAfter = parseInt($(this).attr("data-pageAfter"));
+                var randomTxt = randomString(6,
+                    '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ') + Number(new Date());
+
+                setTimeout(function () {
+
+                    var localPgeStor = pageGlobal;
+                    $(flipbook).turn("page", pageAfter);
+
+                    $(".ad1").remove();
+                    $(".shadow").after(
+                        "<div class='ad1' id='adID' style='width: 100%;height: 100%;background: #000;z-index: 1000000;position: absolute; visibility: hidden;'><iframe src='" +
+                        adURL + "&ranTxt=" + randomTxt +
+                        "' id='p2Ad' width='100%' height='100%'></iframe><div id='skipTo'>Skip</div></div>"
+                    );
+                    $(".ad1").css("visibility", "visible");
+
+                    $(document).unbind("keydown");
+                    $(".next-button, .previous-button").unbind("click");
+
+                    $(flipbook).on("released", bindNxtFun);
+
+                    sessionStorage.adTimeTrckSt = Number(new Date());
+
+                    setTimeout(function () {
+
+                        nxt_BtnPress[0].removeEventListener("click", show_Nxt, true);
+
+                        nxt_KeyPress.removeEventListener("keydown", show_Nxt, true);
+
+                        prv_BtnPress[0].removeEventListener("click", show_Prev, true);
+
+                        prv_KeyPress.removeEventListener("keydown", show_Prev, true);
+
+                        nxt_BtnPress[0].addEventListener("click", rmv_Ads_Nxt, true);
+
+                        nxt_KeyPress.addEventListener("keydown", rmv_Ads_Nxt, true);
+
+                        prv_BtnPress[0].addEventListener("click", rmv_Ads_Prev, true);
+
+                        prv_KeyPress.addEventListener("keydown", rmv_Ads_Prev, true);
+
+                        skipNext = document.getElementById("skipTo");
+                        if (skipNext) {
+                            if (localPgeStor < pageAfter) {
+                                skipNext.addEventListener("click", rmv_Ads_Nxt, false);
+                            } else {
+                                skipNext.addEventListener("click", rmv_Ads_Prev, false);
+                            }
+                        }
+
+                    }, 1000);
+
+                }, 200);
+
+            });
+
+            $(".thumbHTML li img").not(".showAd_thumb").on("click", function () {
+                $(".ad1").remove();
+
+                $(document).unbind("keydown");
+
+                $(flipbook).on("released", bindPrevFun);
+
+                prv_BtnPress[0].addEventListener("click", show_Prev, true);
+
+                prv_KeyPress.addEventListener("keydown", show_Prev, true);
+
+            });
+
+            $('#canvas').fadeIn(1000);
+            document.body.addEventListener('swl', function () {
+                $(flipbook).turn("next");
+            }, false);
+
+            document.body.addEventListener('swr', function () {
+                $(flipbook).turn("previous");
+            }, false);
+
+
+            var flipbook = $('.magazine');
+
+            if (flipbook.width() == 0 || flipbook.height() == 0) {
+                setTimeout(beforeLoadApp, 10);
+                return;
+            }
+
+            $(flipbook).bind('turning', function (e, page) {
+                var range = $(this).turn('range', page);
+                for (page = range[0]; page <= range[1]; page++)
+                    var jsonval = addPage(page, $(this));
+            });
+
+            function addPage(page, book) {
+
+                if (!book.turn('hasPage', page)) {
+                    /*var element = $('<img id="pageIMG">');*/
+                    var element = $('<div />', {});
+                    book.turn('addPage', element, page);
+                    element.html('<div class="gradient"></div>');
+                    loadRegions(getThumb[page], element);
+                    if (page < noOfPages) {
+
+                        var nextPg = "https://emonvili.sirv.com/Patrika01-testMagazine/" + getThumb[page] + ".png";
+
+                        $(element).append("<img src='" + nextPg + "' />");
+                        /* $.ajax({
+                             type: "POST",
+                             url: "<?php echo site_url('get_json/getImagestest');?>",
+                             data : {page_type:page_type,frmPage:page,file_path:magDataURL},
+                         }).done(function(data) {
+                             var data1 = $.parseJSON(data);
+                             $.each(data1.pagesAbsPath,function(i,val){
+                                 element.html('<div class="gradient"></div>');
+                                 loadRegions(page, element);
+                                 $(element).append("<img src='"+data1.pagesAbsPath[i]+"' />");
+                             });
+                         });*/
+                        //  <figure><img class="imgrespons" src="https://maghtml.magzter.com/data/7237/1462515692/jpg/1.jpg"></figure> 
+
+                    } else {
+
+                        element.html(``);
+                        // element.html(` <div class="promContainer">
+                        //                     <div class="blurCover"></div>
+                        //                     <div class="prominner">
+                        //                     <div class="prominfo">
+                        //                     <section class="magGoldSubcontainer"> 
+                        //                     <section class="unlockfullaccess">
+                        //                     <aside class="unlockinfo"> <h4>Unlock full access to </h4> <p class="issueMag"><span class="magName">India Today</span>, <span class="issueDat">January 2019</span> issue</p> <button class="viewall">View All Plans</button> </aside> </section> <section class="magGoldSubs">  <figure><img src="https://cdn.magzter.com/web/assets/viewer/reader/magGold.png" class="imgrespons"></figure> <p>Unlimited access to <span class="magGoldMagName">India Today</span> and 5,000+ other <br> magazines for just <span class="Magprice">Rs. 399/month</span></p> <button class="tryfree">Try FREE for 7 days</button> <p class="orbar"><span>OR</span></p> <h3>Subscribe to <span class="trymag">India Today</span> magazine</h3> <button class="viewall">View All Plans</button> </section> </section> </div> </div> </div></div>
+                        //                 `);
+
+                    }
+                }
+            }
+
+            function loadRegions(page, element) {
+                /*if (fullJson == 0) {
+                    var link_url = "//maghtml.magzter.com/" + magDataURL + "json/" + page + ".json";
+                    $.ajax({
+                        type: "POST",
+                        dataType: "json",
+                        url: 'https://www.magzter.com/get_json_v3/getImagestest',
+                        data: {
+                            json_url: link_url,
+                            page_type: page_type,
+                            frmPage: page,
+                            file_path: magDataURL
+                        },
+                    }).done(function (data) {
+                        $.each(data.json_links, function (key, region) {
+                            addRegion(region, element, data.image_width, data.image_height);
+                        });
+                    });
+                } else {*/
+                links = linkSet.find(function (v) {
+                    return v.page_no == page;
+                });
+
+                //	links = linkSet[page];
+                if (links != undefined) {
+                    $.each(links.link, function (key, region) {
+                        addRegion(region, element, links.image_width, links.image_height);
+                    });
+                }
+                //}
+            }
+
+            if (window.matchMedia('(max-width: 1023px)').matches) {
+                sig_R_dou = "single";
+            } else {
+                sig_R_dou = "double";
+            }
+
+            flipbook.turn({
+
+                direction: getBookDirection,
+
+                display: sig_R_dou,
+
+                width: pageWidth,
+
+                height: pageHeight,
+
+                duration: 1000,
+
+                acceleration: !isChrome(),
+
+                gradients: true,
+
+                autoCenter: true,
+
+                elevation: 100,
+
+                pages: noOfPages,
+
+                turnCorners: "bl,br",
+
+                duration: 1200,
+
+                when: {
+                    turning: function (event, page, view) {
+                        $("#screenlayer").show();
+                        pageGlobal = page;
+                        pgAfter = 3;
+                        pgBefore = 4;
+                        goFurther = false;
+
+                        $(".ad1").remove();
+                        $(flipbook).unbind("released", bindNxtFun);
+                        $(flipbook).unbind("released", bindPrevFun);
+
+                        if (sig_R_dou == "double") {
+
+                            var chk_Arr = contains.call(ad_pages, (page + 1));
+
+                            if (chk_Arr) {
+                                pgAfter = page + 1;
+                                pgBefore = pgAfter + 1;
+                                page++;
+                                goFurther = true;
+                                setAd(goFurther, pgAfter, pgBefore);
+                            } else {
+
+                                /*chk_Arr = contains.call(ad_pages, page);*/
+                                chk_Arr = contains.call(ad_pages, (page - 2));
+
+                                if (chk_Arr) {
+                                    goFurther = true;
+                                    pgAfter = page - 2;
+                                    pgBefore = page - 1;
+                                    page--;
+                                    setAd(goFurther, pgAfter, pgBefore);
+                                    /*goFurther = true;
+                                    pgAfter = page;
+                                    pgBefore = page+1;
+                                    setAd(goFurther,pgAfter,pgBefore);*/
+
+                                } else {
+
+                                    /*chk_Arr = contains.call(ad_pages, (page-2));*/
+                                    chk_Arr = contains.call(ad_pages, page);
+
+                                    if (chk_Arr) {
+                                        goFurther = true;
+                                        pgAfter = page;
+                                        pgBefore = page + 1;
+                                        setAd(goFurther, pgAfter, pgBefore);
+                                        /*goFurther = true;
+                                        pgAfter = page-2;
+                                        pgBefore = page-1;
+                                        page--;
+                                        setAd(goFurther,pgAfter,pgBefore);*/
+
+                                    } else {
+                                        chk_Arr = contains.call(ad_pages, (page - 1));
+                                        if (chk_Arr) {
+                                            goFurther = true;
+                                            pgAfter = page - 1;
+                                            pgBefore = page;
+                                            setAd(goFurther, pgAfter, pgBefore);
+                                        } else {
+
+                                            goFurther = false;
+
+                                            nxt_KeyPress.removeEventListener("keydown", show_Nxt, true);
+                                            nxt_KeyPress.removeEventListener("keydown", rmv_Ads_Nxt, true);
+                                            nxt_KeyPress.removeEventListener("keydown", rmv_Ads_Nxt_2,
+                                                true);
+
+                                            nxt_BtnPress[0].removeEventListener("click", show_Nxt, true);
+                                            nxt_BtnPress[0].removeEventListener("click", rmv_Ads_Nxt, true);
+                                            nxt_BtnPress[0].removeEventListener("click", rmv_Ads_Nxt_2,
+                                                true);
+
+                                            prv_KeyPress.removeEventListener("keydown", show_Prev, true);
+                                            prv_KeyPress.removeEventListener("keydown", rmv_Ads_Prev, true);
+                                            prv_KeyPress.removeEventListener("keydown", rmv_Ads_Prev_2,
+                                                true);
+
+                                            prv_BtnPress[0].removeEventListener("click", show_Prev, true);
+                                            prv_BtnPress[0].removeEventListener("click", rmv_Ads_Prev,
+                                                true);
+                                            prv_BtnPress[0].removeEventListener("click", rmv_Ads_Prev_2,
+                                                true);
+
+                                            set_keydown();
+                                            nxtprvBtnAct();
+                                            $(".ad1").remove();
+
+                                        }
+                                    }
+                                }
+                            }
+
+                        } else {
+
+                            var chk_Arr_mob = contains.call(ad_pages, page);
+
+                            if (chk_Arr_mob) {
+                                goFurther = true;
+                                pgAfter = page;
+                                pgBefore = pgAfter + 1;
+                                setAd(goFurther, pgAfter, pgBefore);
+                            } else {
+                                chk_Arr_mob = contains.call(ad_pages, (page + 1));
+                                if (chk_Arr_mob) {
+                                    goFurther = true;
+                                    pgAfter = page;
+                                    pgBefore = pgAfter + 1;
+                                    setAd(goFurther, pgAfter, pgBefore);
+                                } else {
+                                    goFurther = false;
+                                    pgAfter = page;
+                                    pgBefore = pgAfter + 1;
+                                    setAd(goFurther, pgAfter, pgBefore)
+                                }
+
+                            }
+
+                        }
+
+                        function setAd(goFurther, pgAfter, pgBefore) {
+
+                            if (goFurther) {
+                                $("#screenlayer").hide();
+                                randomTxt = randomString(6,
+                                        '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ') +
+                                    Number(new Date());
+                                $(".ad1").remove();
+
+                                var get_adURL = $(".page-" + pgAfter + ".showAd_thumb").attr("data-adurl");
+                                if (typeof get_adURL != 'undefined') {
+                                    //if(isset($_SESSION['user_id']) && ($_SESSION['user_id']=='602906' || $_SESSION['user_id']=='4982733' || $_SESSION['user_id']=='2610032')) {
+
+                                    if ('15860691') {
+                                        $(".shadow").after(
+                                            "<div class='ad1' id='adID' style='width: 100%;height: 100%;background: #000;z-index: 1000000;position: absolute; visibility: hidden;'><iframe src='" +
+                                            get_adURL + "&ranTxt=" + randomTxt +
+                                            "' id='p2Ad' width='100%' height='100%'></iframe><div id='skipTo'>Skip</div></div>"
+                                        );
+                                    } else {
+                                        $(".page-wrapper[page='" + pgBefore + "'], .page-wrapper[page='" +
+                                            pgBefore + "']:hidden").after(
+                                            "<div class='ad1' id='adID' style='width: 100%;height: 100%;background: #000;z-index: 1000000;position: absolute; visibility: hidden;'><iframe src='" +
+                                            get_adURL + "&ranTxt=" + randomTxt +
+                                            "' id='p2Ad' width='100%' height='100%'></iframe><div id='skipTo'>Skip</div></div>"
+                                        );
+                                    }
+                                    //  console.log(page +" - pgAfter: "+ pgAfter +" - pgBefore: "+ pgBefore);
+
+                                    campId = $(".page-" + pgAfter + ".showAd_thumb").attr("data-campId");
+                                    adId = $(".page-" + pgAfter + ".showAd_thumb").attr("data-adId");
+                                    campIntId = $(".page-" + pgAfter + ".showAd_thumb").attr(
+                                        "data-cinterId");
+                                    adPageNo = page;
+                                    curPage = page;
+
+                                    if (page == pgAfter) {
+
+                                        $(document).unbind("keydown");
+                                        $(".next-button, .previous-button").unbind("click");
+
+                                        $(flipbook).on("released", bindNxtFun);
+
+                                        nxt_BtnPress[0].addEventListener("click", show_Nxt, true);
+
+                                        nxt_KeyPress.addEventListener("keydown", show_Nxt, true);
+
+                                        prv_BtnPress[0].removeEventListener("click", show_Prev, true);
+
+                                        prv_KeyPress.removeEventListener("keydown", show_Prev, true);
+
+                                        prv_BtnPress[0].addEventListener("click", rmv_Ads_Prev, true);
+
+                                        prv_KeyPress.addEventListener("keydown", rmv_Ads_Prev, true);
+
+                                    } else if (page == pgBefore) {
+
+                                        $(document).unbind("keydown");
+                                        $(".next-button, .previous-button").unbind("click");
+
+                                        $(flipbook).on("released", bindPrevFun);
+
+                                        nxt_BtnPress[0].removeEventListener("click", show_Nxt, true);
+
+                                        nxt_KeyPress.removeEventListener("keydown", show_Nxt, true);
+
+                                        prv_BtnPress[0].addEventListener("click", show_Prev, true);
+
+                                        prv_KeyPress.addEventListener("keydown", show_Prev, true);
+
+                                        nxt_KeyPress.addEventListener("keydown", rmv_Ads_Nxt, true);
+
+                                        nxt_BtnPress[0].addEventListener("click", rmv_Ads_Nxt, true);
+
+                                    }
+
+                                    chgLP("p2Ad", "vidPause");
+
+                                }
+
+                            }
+                        }
+
+                        var book = $(this),
+                            currentPage = book.turn('page'),
+                            pages = book.turn('pages');
+
+                        if (sig_R_dou == "double" && page == (noOfPages - 1)) {
+                            $(document).find(".magazine").find(".next-button").css("visibility",
+                                "hidden");
+                        } else {
+                            $(document).find(".magazine").find(".next-button").css("visibility",
+                                "visible");
+                        }
+                        Hash.go('page/' + page).update();
+                        disableControls(page);
+
+                        $('.thumbnails .page-' + currentPage).parent().removeClass('current');
+
+                        $('.thumbnails .page-' + page).parent().addClass('current');
+
+                        $(".region").css("opacity", "0.2");
+
+                    },
+                    turned: function (event, page, view) {
+
+                        var imgSrcTest = $(".page.p" + page + " img").attr("src");
+                        var newImg = new Image();
+                        newImg.onload = function () {
+                            $("#screenlayer").hide();
+                        }
+                        newImg.onerror = function () {
+                            $("#screenlayer").hide();
+                            //window.location.reload();
+                        }
+                        newImg.src = imgSrcTest;
+
+                        disableControls(page);
+                        $(this).turn('center');
+
+                        if (page == 1) {
+                            $(this).turn('peel', 'br');
+                        } else if (page == (noOfPages - 1)) {
+                            var magIMG_height = $(document).find(".magIMG.genSub").height();
+                            $(document).find(".subscribe_btn").css("height", magIMG_height + "px");
+                        }
+
+                        setTimeout(function () {
+                            $(".region").css("opacity", "0.0");
+                        }, 2500)
+                        if('0' != 100) {
+                            if (window.matchMedia("(orientation: portrait)").matches) {
+                            trackPage(page, "p");
+                        } else {
+                            trackPage(page, "l");
+                        }
+                        }
+                    },
+                    missing: function (event, pages) {
+                        for (var i = 0; i < pages.length; i++)
+                            addPage(pages[i], $(this));
+                    }
+                }
+
+            });
+
+            $(".next-button").before('<div id="screenlayer"></div>');
+
+            /* Dec2016 start */
+            function bindNxtFun() {
+                //  console.log("bindNxtFun");
+                show_Nxt({
+                    type: "drag2Next",
+                    turnOff: true
+                });
+            }
+
+            function bindPrevFun() {
+                //  console.log("bindPrevFun");
+                show_Prev({
+                    type: "drag2Prev",
+                    turnOff: true
+                });
+            }
+
+            function show_Nxt(e) {
+
+                /*e.stopPropagation();*/
+
+                //  console.log("show_Nxt");
+
+                var canProceed = false;
+                if (e.type == 'keydown') {
+                    if (e.keyCode == 39) {
+                        canProceed = true;
+                        /*flipbook.turn("next");*/
+                    } else {
+                        /*show_Prev(e);*/
+                    }
+                } else if (e.type == 'click') {
+                    canProceed = true;
+                } else if (e.type == 'drag2Next') {
+                    canProceed = true;
+                }
+
+                //  console.log("canProceed: "+ canProceed);
+
+                if (canProceed) {
+                    //  console.log("e.turnOff: "+ e.turnOff);
+                    /*if(e.turnOff){
+                        flipbook.turn("disable", false);
+                    }else{
+                        flipbook.turn("disable", true);
+                    }*/
+
+                    flipbook.turn("disable", true);
+
+                    $(".ad1 iframe").css("visibility", "hidden");
+                    $(".ad1 iframe").after(
+                        "<img src='https://akcdn.magzter.com/web/assets/newreader/pics/load_ad.gif' style='position: absolute; top: 45%; left: 45%;' />"
+                    );
+                    $(".ad1").css("visibility", "visible");
+
+                    setTimeout(function () {
+                        $(".ad1 iframe").css("visibility", "visible");
+                        $(".ad1 img").remove();
+
+                        sessionStorage.adTimeTrckSt = Number(new Date());
+                        //  console.log("adTimeStart: "+ Number(new Date()));
+
+                    }, 1000);
+
+                    $(flipbook).off("released", bindNxtFun);
+
+                    skipNext = document.getElementById("skipTo");
+                    if (skipNext) {
+                        skipNext.addEventListener("click", rmv_Ads_Nxt, false);
+                    }
+
+                    nxt_KeyPress.removeEventListener("keydown", show_Nxt, true);
+                    nxt_KeyPress.addEventListener("keydown", rmv_Ads_Nxt, true);
+
+                    nxt_BtnPress[0].removeEventListener("click", show_Nxt, true);
+                    nxt_BtnPress[0].addEventListener("click", rmv_Ads_Nxt, true);
+
+                    prv_KeyPress.removeEventListener("keydown", show_Prev, true);
+                    prv_BtnPress[0].removeEventListener("click", show_Prev, true);
+
+                    prv_KeyPress.addEventListener("keydown", rmv_Ads_Prev_2, true);
+                    prv_BtnPress[0].addEventListener("click", rmv_Ads_Prev_2, true);
+
+                    chgLP("p2Ad", "vidPlay");
+
+                } else {
+                    set_keydown();
+                    nxtprvBtnAct();
+                }
+
+            }
+
+            function rmv_Ads_Nxt(e) {
+
+                //  console.log("rmv_Ads_Nxt: "+ e.type);
+
+                var canProceed = false;
+                if (e.type == 'keydown') {
+                    if (e.keyCode == 39) {
+                        canProceed = true;
+                        /*flipbook.turn("next");*/
+                    }
+                } else if (e.type == 'click') {
+                    canProceed = true;
+                }
+
+                if (canProceed) {
+
+                    adRmvNxt = true;
+                    $(".ad1, .ad1 iframe").css("visibility", "hidden");
+                    flipbook.turn("disable", false);
+
+                    if (sessionStorage.adTimeTrckSt != '') {
+                        var adTimeEnd = Number(new Date());
+                        var adTimeStart = parseInt(sessionStorage.adTimeTrckSt);
+                        sessionStorage.adTimeTrckSt = '';
+                        //  console.log("adTimeEnd: "+ adTimeEnd)
+                        var adTimeTotal = Math.floor(adTimeEnd - adTimeStart) / 1000;
+                        //  console.log("adTimeTotal: "+ adTimeTotal);
+
+                        trackadService(adTimeTotal)
+                    }
+
+                    if (e.type == 'click') {
+                        if (curPage != pgAfter) {
+                            var isAdOne1 = $(".ad1");
+                            if (adRmvNxt == true) {
+                                $(".ad1").remove();
+                                if (isAdOne1.length == 0) {
+                                    flipbook.turn("next")
+                                }
+                            } else {
+                                flipbook.turn("next")
+                            }
+                        } else {
+                            flipbook.turn("next")
+                        }
+                    }
+
+                    /*if(sig_R_dou == "single"){
+                        flipbook.turn("previous");
+                    }*/
+
+                    nxt_KeyPress.removeEventListener("keydown", rmv_Ads_Nxt, true);
+                    prv_KeyPress.removeEventListener("keydown", rmv_Ads_Nxt, true);
+
+                    nxt_BtnPress[0].removeEventListener("click", rmv_Ads_Nxt, true);
+                    prv_BtnPress[0].removeEventListener("click", rmv_Ads_Nxt, true);
+
+                    prv_KeyPress.removeEventListener("keydown", show_Prev, true);
+                    prv_BtnPress[0].removeEventListener("click", show_Prev, true);
+
+                    prv_KeyPress.removeEventListener("keydown", rmv_Ads_Prev_2, true);
+                    prv_BtnPress[0].removeEventListener("click", rmv_Ads_Prev_2, true);
+
+                    prv_KeyPress.addEventListener("keydown", show_Prev, true);
+                    prv_BtnPress[0].addEventListener("click", show_Prev, true);
+
+                    skipNext = document.getElementById("skipTo");
+                    if (skipNext) {
+                        skipNext.removeEventListener("click", rmv_Ads_Nxt, false);
+                    }
+
+                    set_keydown();
+                    nxtprvBtnAct();
+
+                }
+
+            }
+
+            function rmv_Ads_Nxt_2(e) {
+                //  console.log("rmv_Ads_Nxt_2");
+
+                var canProceed = false;
+                if (e.type == 'keydown') {
+                    if (e.keyCode == 39) {
+                        canProceed = true;
+                        /*flipbook.turn("next");*/
+                    }
+                } else if (e.type == 'click') {
+                    canProceed = true;
+                }
+
+                if (canProceed) {
+
+                    adRmvNxt = true;
+                    $(".ad1, .ad1 iframe").css("visibility", "hidden");
+                    flipbook.turn("disable", false);
+                    //flipbook.turn("next");
+
+                    if (e.type == 'click') {
+                        if (curPage == pgBefore) {
+                            $(".ad1").remove();
+                        } else if ((pgBefore - pgAfter) == 1) {
+                            $(".ad1").remove();
+                        } else if (curPage != pgAfter) {
+                            var isAdOne1 = $(".ad1");
+                            if (adRmvNxt == true) {
+                                $(".ad1").remove();
+                                if (isAdOne1.length == 0) {
+                                    flipbook.turn("next")
+                                }
+                            } else {
+                                flipbook.turn("next")
+                            }
+                        } else {
+                            flipbook.turn("next")
+                        }
+                    }
+
+                    if (sessionStorage.adTimeTrckSt != '') {
+                        var adTimeEnd = Number(new Date());
+                        var adTimeStart = parseInt(sessionStorage.adTimeTrckSt);
+                        sessionStorage.adTimeTrckSt = '';
+                        //  console.log("adTimeEnd: "+ adTimeEnd)
+                        var adTimeTotal = Math.floor(adTimeEnd - adTimeStart) / 1000;
+                        //  console.log("adTimeTotal: "+ adTimeTotal);
+
+                        trackadService(adTimeTotal)
+                    }
+
+                    nxt_KeyPress.removeEventListener("keydown", rmv_Ads_Nxt_2, true);
+
+                    nxt_BtnPress[0].removeEventListener("click", rmv_Ads_Nxt_2, true);
+
+                    prv_KeyPress.removeEventListener("keydown", show_Prev, true);
+                    prv_BtnPress[0].removeEventListener("click", show_Prev, true);
+
+                    prv_KeyPress.removeEventListener("keydown", rmv_Ads_Prev_2, true);
+                    prv_BtnPress[0].removeEventListener("click", rmv_Ads_Prev_2, true);
+
+                    prv_KeyPress.addEventListener("keydown", rmv_Ads_Prev, true);
+                    prv_BtnPress[0].addEventListener("click", rmv_Ads_Prev, true);
+
+                    set_keydown();
+                    nxtprvBtnAct();
+
+                }
+
+            }
+
+            function show_Prev(e) {
+
+                //  console.log("*** show_Prev ***");
+
+                var canProceed = false;
+                if (e.type == 'keydown') {
+                    if (e.keyCode == 37) {
+                        canProceed = true;
+                    } else if (e.keyCode == 39) {
+                        //  console.log("show_Prev else");
+                        set_keydown();
+                        nxtprvBtnAct();
+                    }
+                } else if (e.type == 'click') {
+                    canProceed = true;
+                } else if (e.type == 'drag2Prev') {
+                    canProceed = true;
+                }
+
+                if (canProceed) {
+
+                    flipbook.turn("disable", true);
+
+                    $(".ad1 iframe").css("visibility", "hidden");
+                    $(".ad1 iframe").after(
+                        "<img src='https://akcdn.magzter.com/web/assets/newreader/pics/load_ad.gif' style='position: absolute; top: 45%; left: 45%;' />"
+                    );
+                    $(".ad1").css("visibility", "visible");
+
+                    setTimeout(function () {
+                        $(".ad1 iframe").css("visibility", "visible");
+                        $(".ad1 img").remove();
+
+                        sessionStorage.adTimeTrckSt = Number(new Date());
+                        //  console.log("adTimeStart: "+ Number(new Date()));
+                    }, 1000);
+
+                    /*$(flipbook).unbind("released", bindPrevFun);*/
+
+                    $(flipbook).off("released", bindPrevFun);
+
+                    skipNext = document.getElementById("skipTo");
+                    if (skipNext) {
+                        skipNext.addEventListener("click", rmv_Ads_Prev, false);
+                    }
+
+                    prv_KeyPress.removeEventListener("keydown", show_Prev, true);
+                    prv_BtnPress[0].removeEventListener("click", show_Prev, true);
+
+                    prv_KeyPress.addEventListener("keydown", rmv_Ads_Prev, true);
+                    prv_BtnPress[0].addEventListener("click", rmv_Ads_Prev, true);
+
+                    nxt_KeyPress.removeEventListener("keydown", show_Nxt, true);
+                    nxt_BtnPress[0].removeEventListener("click", show_Nxt, true);
+
+                    nxt_KeyPress.addEventListener("keydown", rmv_Ads_Nxt_2, true);
+                    nxt_BtnPress[0].addEventListener("click", rmv_Ads_Nxt_2, true);
+
+                    chgLP("p2Ad", "vidPlay");
+                }
+
+            }
+
+            function rmv_Ads_Prev(e) {
+                //  console.log("rmv_Ads_Prev "+ e.type)
+
+                var canProceed = false;
+                if (e.type == 'keydown') {
+                    if (e.keyCode == 37) {
+                        canProceed = true;
+                    }
+                } else if (e.type == 'click') {
+                    canProceed = true;
+                }
+                if (e.type == 'swr') {
+                    canProceed = true;
+                }
+
+                if (canProceed) {
+
+                    $(".ad1, .ad1 iframe").css("visibility", "hidden");
+
+                    if (sessionStorage.adTimeTrckSt != '') {
+                        var adTimeEnd = Number(new Date());
+                        var adTimeStart = parseInt(sessionStorage.adTimeTrckSt);
+                        sessionStorage.adTimeTrckSt = '';
+                        //  console.log("adTimeEnd: "+ adTimeEnd)
+                        var adTimeTotal = Math.floor(adTimeEnd - adTimeStart) / 1000;
+                        //  console.log("adTimeTotal: "+ adTimeTotal);
+
+                        trackadService(adTimeTotal)
+                    }
+
+                    flipbook.turn("disable", false);
+                    adRmvPrv = true;
+
+                    if (e.type == "swr") {
+                        flipbook.turn("previous");
+                    }
+
+                    if (e.type == 'click') {
+                        if (curPage != pgBefore) {
+                            var isAdOne = $(".ad1");
+
+                            if (adRmvPrv == true) {
+                                $(".ad1").remove();
+                                if (isAdOne.length == 0) {
+                                    flipbook.turn("previous");
+                                }
+                            } else {
+                                flipbook.turn("previous");
+                            }
+                        } else {
+                            flipbook.turn("previous");
+                        }
+                    }
+
+                    prv_KeyPress.removeEventListener("keydown", rmv_Ads_Prev, true);
+                    prv_BtnPress[0].removeEventListener("click", rmv_Ads_Prev, true);
+                    skipNext = document.getElementById("skipTo");
+                    if (skipNext) {
+                        skipNext.removeEventListener("click", rmv_Ads_Prev, false);
+                    }
+
+                    set_keydown();
+                    nxtprvBtnAct();
+                }
+            }
+
+            function rmv_Ads_Prev_2(e) {
+                //  console.log("rmv_Ads_Prev_2")
+
+                var canProceed = false;
+                if (e.type == 'keydown') {
+                    if (e.keyCode == 37) {
+                        canProceed = true;
+                    }
+                } else if (e.type == 'click' || e.type == 'swr') {
+                    canProceed = true;
+                }
+
+                if (canProceed) {
+
+                    adRmvPrv = true;
+                    $(".ad1, .ad1 iframe").css("visibility", "hidden");
+
+                    if (sessionStorage.adTimeTrckSt != '') {
+                        var adTimeEnd = Number(new Date());
+                        var adTimeStart = parseInt(sessionStorage.adTimeTrckSt);
+                        sessionStorage.adTimeTrckSt = '';
+                        //  console.log("adTimeEnd: "+ adTimeEnd)
+                        var adTimeTotal = Math.floor(adTimeEnd - adTimeStart) / 1000;
+                        //  console.log("adTimeTotal: "+ adTimeTotal);
+
+                        trackadService(adTimeTotal)
+                    }
+
+                    flipbook.turn("disable", false);
+                    //flipbook.turn("previous");
+
+                    if (e.type == 'click') {
+                        if (curPage == pgAfter) {
+                            $(".ad1").remove();
+                        } else if ((pgBefore - pgAfter) == 0) {
+                            $(".ad1").remove();
+                        } else if (curPage != pgBefore) {
+                            var isAdOne = $(".ad1");
+                            if (adRmvPrv == true) {
+                                if (isAdOne.length == 0) {
+                                    flipbook.turn("previous");
+                                }
+                                $(".ad1").remove();
+                            } else {
+                                flipbook.turn("previous");
+                            }
+                        } else {
+                            flipbook.turn("previous");
+                        }
+                    }
+
+                    prv_KeyPress.removeEventListener("keydown", rmv_Ads_Prev_2, true);
+                    prv_BtnPress[0].removeEventListener("click", rmv_Ads_Prev_2, true);
+
+                    set_keydown();
+                    nxtprvBtnAct();
+                }
+            }
+
+            function trackadService(sessTime) {
+                //  console.log("trackadService")
+
+                var frameContent = $("#p2Ad").contents();
+                var eventCount = frameContent.find(".trackCount").val();
+
+                jQuery.ajax({
+                    type: "POST",
+                    url: "https://ads.magzter.com/trackad.php",
+                    data: {
+                        uid: '15860691',
+                        cid: campId,
+                        aid: adId,
+                        dev: 'web',
+                        os: "web",
+                        udid: 0,
+                        intid: campIntId,
+                        mid: '7237',
+                        pageno: adPageNo,
+                        sess: sessTime,
+                        isnews: isnews,
+                        ucon: 'IN',
+                        mcon: 'IN',
+                        sid: '1',
+                        eventcnt: eventCount,
+                        uniqid: randomTxt,
+                        pubId: '363',
+                        issid: '165107'
+                    },
+                    success: function (msg) {
+                        //  console.log(msg);
+                    },
+                    error: function () {
+                    }
+                });
+
+            }
+
+            function chgLP(frameID, vidAct) {
+
+                var frameContent;
+                var frameVideo;
+
+                if (vidAct == "vidPause") {
+                    $("#" + frameID).load(function () {
+                        frameContent = $("#" + frameID).contents();
+
+                        frameContent.find("a").attr("onclick", "");
+
+                        frameContent.find("a").on("click", function (e) {
+                            e.preventDefault();
+                            var getHREF = $(this).attr("href");
+
+                            if (getHREF.indexOf("http") != -1) {
+                                window.open(getHREF, "Ad Title",
+                                    "location=0,status=0,scrollbars=0, width=" + $(window).width() +
+                                    ",height=" + $(window).height());
+                            }
+                        });
+
+                        frameContent.find("area").on("click", function (e) {
+                            e.preventDefault();
+                            var href_val = $(this).attr("href");
+
+                            if (href_val.indexOf("http") != -1) {
+                                window.open(href_val, "Ad Title",
+                                    "location=0,status=0,scrollbars=0, width=" + $(window).width() +
+                                    ",height=" + $(window).height());
+                            }
+                        });
+
+                        frameVideo = frameContent.find("video");
+
+                        if (frameVideo.length > 0) {
+                            frameVideo[0].addEventListener('loadeddata', function () {
+                                // console.log("vidAct loadeddata " + vidAct);
+                                frameVideo[0].pause();
+                            }, false);
+                        }
+
+                    });
+
+                } else if (vidAct == "vidPlay") {
+
+                    frameContent = $("#" + frameID).contents();
+                    frameVideo = frameContent.find("video");
+
+                    if (frameVideo.length > 0 && frameVideo[0].scrollHeight > 0) {
+                        frameVideo[0].play();
+                    }
+                }
+
+            }
+            // Zoom.js
+            $('.magazine-viewport').zoom({
+                flipbook: $('.magazine'),
+
+                max: function () {
+                    return largeMagazineWidth() / $('.magazine').width();
+                },
+
+                when: {
+                    swipeLeft: function () {
+                        $(this).zoom('flipbook').turn('next');
+                    },
+                    swipeRight: function () {
+                        $(this).zoom('flipbook').turn('previous');
+                    },
+                    resize: function (event, scale, page, pageElement) {
+                        if (scale == 1)
+                            loadSmallPage(page, pageElement);
+                        else
+                            loadLargePage(page, pageElement);
+                    },
+
+                    zoomIn: function () {
+
+                        $('.thumbnails').hide();
+                        $('.made').hide();
+                        $('.magazine').removeClass('animated').addClass('zoom-in');
+                        $('.zoom-icon').removeClass('zoom-icon-in').addClass('zoom-icon-out');
+
+                        $("#canvas").css("cursor", "move");
+                        $(".zoom-icon").attr("title", "Zoom Out");
+                        $(".thumbnails").removeClass("setMinHei");
+
+                        if (!window.escTip && !$.isTouch) {
+                            escTip = true;
+                            $('<div />', {
+                                'class': 'exit-message'
+                            }).html('<div>Press ESC to exit</div>').appendTo($('body')).
+                            delay(2000).animate({
+                                opacity: 0
+                            }, 500, function () {
+                                $(this).remove();
+                            });
+                        }
+                    },
+                    zoomOut: function () {
+                        $('.exit-message').hide();
+                        $('.thumbnails').fadeIn();
+                        $('.made').fadeIn();
+                        $('.zoom-icon').removeClass('zoom-icon-out').addClass('zoom-icon-in');
+                        $("#canvas").css("cursor", "auto");
+                        $(".zoom-icon").attr("title", "Zoom In");
+                        $(".thumbnails").removeClass("setMinHei");
+
+                        setTimeout(function () {
+                            $('.magazine').addClass('animated').removeClass('zoom-in');
+                            resizeViewport();
+                        }, 0);
+                    }
+                }
+            });
+
+            // Zoom event
+            if ($.isTouch) {
+                $('.magazine-viewport').bind('zoom.doubleTap', zoomTo);
+            } else {
+                $('.magazine-viewport').bind('zoom.tap', zoomTo);
+            }
+
+            // Using arrow keys to turn the page
+            set_keydown();
+
+            function set_keydown() {
+                $(document).unbind("keydown");
+                $(".next-button, .previous-button").unbind("click");
+
+                $(document).bind("keydown", function (e) {
+
+                    if (getBookDirection == "rtl") {
+                        var next = 37,
+                            previous = 39,
+                            esc = 27;
+                    } else {
+                        var previous = 37,
+                            next = 39,
+                            esc = 27;
+                    }
+
+                    switch (e.keyCode) {
+                        case previous:
+                            // left arrow
+                            //$('.magazine').turn('previous');
+
+                            if (curPage != pgBefore) {
+                                var isAdOne = $(".ad1");
+
+                                if (adRmvPrv == true) {
+                                    $(".ad1").remove();
+                                    if (isAdOne.length == 0) {
+                                        $('.magazine').turn('previous');
+                                    }
+                                } else {
+                                    $('.magazine').turn('previous');
+                                }
+                            } else {
+                                $('.magazine').turn('previous');
+                            }
+
+                            e.preventDefault();
+
+                            break;
+                        case next:
+                            //right arrow
+                            //$('.magazine').turn('next');
+
+                            if (curPage != pgAfter) {
+                                var isAdOne1 = $(".ad1");
+                                if (adRmvNxt == true) {
+                                    $(".ad1").remove();
+                                    if (isAdOne1.length == 0) {
+                                        $('.magazine').turn('next');
+                                    }
+                                } else {
+                                    $('.magazine').turn('next');
+                                }
+                            } else {
+                                $('.magazine').turn('next');
+                            }
+
+                            e.preventDefault();
+
+                            break;
+                        case esc:
+                            $('.magazine-viewport').zoom('zoomOut');
+                            e.preventDefault();
+                            break;
+                    }
+                });
+            }
+
+            // URIs - Format #/page/1
+            Hash.on('^page\/([0-9]*)$', {
+                yep: function (path, parts) {
+                    var page = parts[1];
+                    if (page !== undefined) {
+                        if ($('.magazine').turn('is'))
+                            $('.magazine').turn('page', page);
+                    }
+                },
+                nop: function (path) {
+                    if ($('.magazine').turn('is'))
+                        $('.magazine').turn('page', 1);
+                }
+            });
+            //added below 2 lines to remove advertisement thumbnail
+            $('.showAd_thumb').parent().addClass('hide1');
+            $('.thumbnails li.hide1').hide();
+
+            $(window).resize(function () {
+                resizeViewport(pageWidth, pageHeight);
+                // window.location.reload();
+            }).bind('orientationchange', function () {
+                resizeViewport(pageWidth, pageHeight);
+                // window.location.reload();
+            });
+
+            // Events for thumbnails
+
+            $('.thumbnails').click(function (event) {
+
+                var page;
+                if (event.target && (page = /page-([0-9]+)/.exec($(event.target).attr('class')))) {
+
+                    $('.magazine').turn('page', page[1]);
+                }
+            });
+            $('.thumbnails li').
+            bind($.mouseEvents.over, function () {
+                $(this).addClass('thumb-hover');
+            }).bind($.mouseEvents.out, function () {
+                $(this).removeClass('thumb-hover');
+            });
+
+            if ($.isTouch) {
+
+                $('.thumbnails').addClass('thumbanils-touch').
+                bind($.mouseEvents.move, function (event) {
+                    event.preventDefault();
+                });
+
+            } else {
+                $('.thumbnails ul').mouseover(function () {
+                    $('.thumbnails').addClass('thumbnails-hover');
+                }).mousedown(function () {
+                    return false;
+                }).mouseout(function () {
+                    $('.thumbnails').removeClass('thumbnails-hover');
+                });
+            }
+
+            // Regions
+            if ($.isTouch) {
+                $('.magazine').bind('touchstart', regionClick);
+            } else {
+                $('.magazine').click(regionClick);
+            }
+
+            // Events for the next button
+            nxtprvBtnAct();
+
+            function nxtprvBtnAct() {
+
+                $('.next-button').bind($.mouseEvents.over, function () {
+                    $(this).addClass('next-button-hover');
+                }).bind($.mouseEvents.out, function () {
+                    $(this).removeClass('next-button-hover');
+                }).bind($.mouseEvents.down, function () {
+                    $(this).addClass('next-button-down');
+                }).bind($.mouseEvents.up, function () {
+                    $(this).removeClass('next-button-down');
+                }).click(function () {
+                    $('.magazine').turn('next');
+                });
+
+                // Events for the next button
+                $('.previous-button').bind($.mouseEvents.over, function () {
+                    $(this).addClass('previous-button-hover');
+                }).bind($.mouseEvents.out, function () {
+                    $(this).removeClass('previous-button-hover');
+                }).bind($.mouseEvents.down, function () {
+                    $(this).addClass('previous-button-down');
+                }).bind($.mouseEvents.up, function () {
+                    $(this).removeClass('previous-button-down');
+                }).click(function () {
+                    $('.magazine').turn('previous');
+                });
+
+            }
+
+            resizeViewport();
+            $('.magazine').addClass('animated');
+            $(".thumbHTML").show();
+
+        }
+
+        // Zoom icon
+        $('.zoom-icon').bind('mouseover', function () {
+
+            if ($(this).hasClass('zoom-icon-in'))
+                $(this).addClass('zoom-icon-in-hover');
+
+            if ($(this).hasClass('zoom-icon-out'))
+                $(this).addClass('zoom-icon-out-hover');
+
+        }).bind('mouseout', function () {
+
+            if ($(this).hasClass('zoom-icon-in'))
+                $(this).removeClass('zoom-icon-in-hover');
+
+            if ($(this).hasClass('zoom-icon-out'))
+                $(this).removeClass('zoom-icon-out-hover');
+        }).bind('click', function () {
+
+            if ($(this).hasClass('zoom-icon-in'))
+                $('.magazine-viewport').zoom('zoomIn');
+            else if ($(this).hasClass('zoom-icon-out'))
+                $('.magazine-viewport').zoom('zoomOut');
+        });
+
+        $('#canvas').hide();
+
+        // Load the HTML4 version if there's not CSS transform
+        yepnope({
+            test: Modernizr.csstransforms,
+            yep: ['https://akcdn.magzter.com/web/assets/newreader/lib/turn.js'],
+            nope: ['https://akcdn.magzter.com/web/assets/newreader/lib/turn.html4.min.js'],
+            both: ['https://akcdn.magzter.com/web/assets/newreader/lib/zoom.min.js',
+                'https://akcdn.magzter.com/web/assets/newreader/js/magazine.js',
+                'https://akcdn.magzter.com/web/assets/newreader/css/magazine.css'
+            ]
+        });
+        document.addEventListener("contextmenu", function (e) {
+            e.preventDefault();
+        });
+    </script>
+
+    <script type="text/javascript">
+        // var arr_clvrtap_read = ['Gold', 'Gold Lite', 'Magazine Subscription', 'Single Issue', 'Free', 'Library',
+        //     'Preview'
+        // ];
+        // clevertap.event.push("Magazine Read", {
+        //     "MagazineID": "7237",
+        //     "Magazine Name": "Outlook SPLURGE",
+        //     "Read Type": arr_clvrtap_read[1],
+        //     "Is Gold": '1',
+        //     "Age Rating": '3',
+        //     "Issue ID": "165107",
+        //     "OS": "Web",
+        //     "App": "Magzter",
+        //     "Magazine Language": "",
+        //     "Primary Category": "12",
+        //     "Secondary Category": "0",
+        //     "Magazine Origin": "IN"
+        // });
+    </script>
+
+    <script>
+        (function ($) {
+
+            function ReaderSearch(options) {
+                this.noop = function () {};
+                this._isOpen = false;
+                this.query = '';
+                this.result = {};
+                this.options = {
+                    magName: '',
+                    magId: '',
+                    issueId: '',
+                    issueName: '',
+                }
+                this.config = {
+                    user: '15860691',
+                    country: "IN", //usercountry
+                    minLengthToSearch: 3,
+                    maxSearchLength: 60,
+                    highLightLimit: 300,
+                    now: Date.now(),
+                    searchUrl: "https://sgapig.magzter.com/magsearch/prod/mag/search_list"
+                }
+                this.elems = {
+                    searchBtn: $('.searchMegz'),
+                    backIcon: $('.backIcon'),
+                    searchGrp: $('.searchMegz .group'),
+                    overlay: $('.overlay'),
+                    resultPanel: $('.searchedInfoValues'),
+                    searchInput: $('.inputSearch'),
+                    flipbook: $('.magazine'),
+                }
+
+                $.extend(this.options, options);
+            }
+
+            ReaderSearch.prototype = {
+
+                init: function init() {
+                    this.isIndexed();
+                    this.bindEvent();
+                },
+                bindEvent: function bindEvent() {
+                    this.elems.searchBtn.on('click', this.open.bind(this));
+                    this.elems.overlay.on('click', this.close.bind(this));
+                    this.elems.backIcon.on('click', this.close.bind(this));
+                    this.elems.searchInput.on('keyup change', this.searchHandler.bind(this));
+                    this.elems.resultPanel.delegate('li', 'click', this.turnPage.bind(this));
+                },
+                find: function find(data, cb) {
+                    if (typeof cb != 'function') {
+                        cb = this.noop;
+                    }
+
+                    if (this.findCall) {
+                        this.findCall.abort();
+                    }
+
+                    this.findCall = $.ajax({
+                        method: "GET",
+                        url: this.config.searchUrl,
+                        data: data,
+                        success: function (result) {
+                            cb(null, result)
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            cb({
+                                error: "some error has occured"
+                            }, null)
+                        }
+                    });
+                },
+                searchHandler: function searchHandler(e) {
+                    var q = e.target.value.trim();
+                    if ((q == '' && this.closePanel()) || !(q.length >= this.config.minLengthToSearch)) {
+                        this.query = q;
+                        // this.query = false;
+                        // this.toogleResultPanel();
+                        return false;
+                    }
+                    if (this.query === q) {
+                        return false
+                    }
+                    if (q.length > this.config.maxSearchLength) {
+                        e.preventDefault();
+                        return false
+                    }
+
+                    if (this.searchTiming) {
+                        clearTimeout(this.searchTiming);
+                    }
+
+                    this.query = q;
+
+                    this.searchTiming = setTimeout(function () {
+                        this.find({
+                            q: this.query,
+                            iss: this.options.issueId,
+                        }, this.resultHandler.bind(this))
+                        this.logIt({
+                            event: 'query',
+                            'value': this.query,
+                            'type': 'reader'
+                        });
+                    }.bind(this), 300);
+
+
+                },
+                resultHandler: function resultHandler(err, data) {
+                    if (err) {
+                        return false
+                    }
+                    this.clearPanel();
+                    var self = this;
+                    this.result = data;
+                    var pages = data.hits.length ? data.hits[0].pages : [];
+                    var list = $('<ul></ul>');
+                    var listItems = [];
+
+                    if (!data.hits.length) {
+                        var item = $(
+                            '<li class="noKeywordMatch"> <a href="javascript:void(0);"> <span class="Discname"></span> <span class="clr">No keyword matches for your search</span> </a> </li>'
+                        );
+                        listItems.push(item);
+                        this.logIt({
+                            event: 'noresult',
+                            'value': this.query,
+                            'type': 'reader'
+                        });
+                    }
+
+                    pages.forEach(function (page, i) {
+                        var highLight = page._highLight.length > self.config.highLightLimit ? page
+                            ._highLight
+                            .substr(0, self.config.highLightLimit) + "..." : page._highLight;
+                        var item = $(
+                            '<li> <a href="javascript:void(0);"> <span class="Discname">Page No : ' +
+                            page.page + '</span> <span class="clr">' + highLight +
+                            '</span> </a> </li>');
+                        item.data('page', page);
+                        listItems.push(item);
+                    });
+                    list.append(listItems);
+                    list.appendTo(this.elems.resultPanel);
+                    this.showPanel();
+                },
+                turnPage: function turnPage(e) {
+                    var target = $(e.currentTarget);
+                    var page = target.data('page');
+                    if (page && typeof page.page != 'undefined') {
+                        this.elems.flipbook.turn('page', page.page);
+                        this.logIt({
+                            event: 'click',
+                            'value': page.page,
+                            'type': 'reader'
+                        });
+                    }
+                },
+                open: function open(q) {
+                    if (parseInt(this.elems.searchGrp.css('left')) == -550) {
+                        this._isOpen = true;
+                        this.elems.searchGrp.stop().animate({
+                            left: 0
+                        }, 300);
+                        this.elems.overlay.fadeIn(300);
+
+                        if (this.query !== '') {
+                            this.showPanel();
+                        }
+                    }
+                },
+                close: function close(q) {
+                    if (parseInt(this.elems.searchGrp.css('left')) == 0) {
+                        this._isOpen = false;
+                        this.elems.searchGrp.stop().animate({
+                            left: -550
+                        }, 300);
+                        this.closePanel();
+                        this.elems.overlay.fadeOut(300);
+                    }
+                },
+                isOpen: function isOpen() {
+                    return this._isOpen;
+                },
+                showPanel: function showPanel() {
+                    this.elems.resultPanel.show();
+                },
+                closePanel: function closePanel() {
+                    this.elems.resultPanel.hide();
+                },
+
+                clearPanel: function () {
+                    this.elems.resultPanel.html('');
+                },
+                isIndexed: function (data, cb) {
+                    var self = this;
+                    $.get("https://sgapig.magzter.com/magsearch/prod/mag/isindexed?doc=" + this.options
+                        .issueId,
+                        function (res) {
+                            if (res && res.found) {
+                                self.elems.searchBtn.show();
+                            } else {
+                                self.elems.searchBtn.hide();
+                            }
+                        })
+                },
+                logIt: function (data, cb) {
+
+                    if (typeof cb != 'function') {
+                        cb = this.noop;
+                    }
+
+                    data.mid = this.options.magId;
+                    data.mn = this.options.magName;
+                    data.issn = this.options.issueName;
+                    data.issid = this.options.issueId;
+                    data.ad = this.config.user;
+                    data.ct = this.config.country;
+                    data.pt = 'web';
+                    data.q = this.query || '';
+                    // data.ctp = clevertap.getCleverTapID() || '';
+                    data.tm = Math.floor(Date.now() / 1000);
+
+                    this.logItReq = $.ajax({
+                        type: "POST",
+                        url: "https://sgapig.magzter.com/magsearch/prod/mag/logs",
+                        data: data,
+                        success: function (result) {
+                            cb(null, result)
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            cb({
+                                error: "some error has occured"
+                            }, null)
+                        }
+                    });
+
+                },
+            }
+
+            $(window).load(function () {
+                var readerSearch = new ReaderSearch({
+                    magId: "7237",
+                    issueId: "165107",
+                    magName: "Outlook SPLURGE",
+                    issueName: "April 2016",
+                });
+                window.readerSearch = readerSearch;
+                readerSearch.init();
+            });
+
+
+        })($);
+    </script>
+    <script>
+        // function addThisStaticEventHandler(evt) {
+        //     clevertap.event.push("Share", {
+        //         "Platform": evt,
+        //         "Type": "Magazine Page",
+        //         "OS": "Web",
+        //         "Mag ID": "7237",
+        //         "Issue ID": "165107"
+        //     });
+        // }
+    </script>
+</body>
+
+</html>
+</script>

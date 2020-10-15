@@ -1,0 +1,149 @@
+.sample-docs .zoom-in{
+	display:none;
+}
+
+.docs-brochure{
+	margin-top:20px;
+	width:942px;
+	height:600px;
+	z-index: 0;
+}
+
+.docs-brochure .page{
+	width:471px;
+	height:600px;
+	background:white;
+
+	-webkit-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-moz-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-ms-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	-o-box-shadow:0 0 20px rgba(0,0,0,0.2);
+	box-shadow:0 0 20px rgba(0,0,0,0.2);
+}
+
+.docs-brochure .hard{
+	background-image:url(../pics/covers.jpg);
+}
+
+.docs-brochure .p2{
+	background-position:-471px 0;
+}
+
+.docs-brochure .p28{
+	background:-webkit-gradient(linear, left top, right top, color-stop(0.95, #fff), color-stop(1, #dadada));
+	background-image:-webkit-linear-gradient(left, #fff 95%, #dadada 100%);
+	background-image:-moz-linear-gradient(left, #fff 95%, #dadada 100%);
+	background-image:-ms-linear-gradient(left, #fff 95%, #dadada 100%);
+	background-image:-o-linear-gradient(left, #fff 95%, #dadada 100%);
+	background-image:linear-gradient(left, #fff 95%, #dadada 100%);
+}
+
+.docs-brochure .p29{
+	background-position:-942px 0;
+}
+
+.docs-brochure .p30{
+	background-position:-1413px 0;
+}
+
+.docs-brochure .even .gradient{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-image:url(../pics/right-border.png);
+	background-position:right top;
+	background-repeat: repeat-y;
+}
+
+.docs-brochure .odd .gradient{
+	position:absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	background-image:url(../pics/left-border.png);
+	background-position:left top;
+	background-repeat: repeat-y;
+}
+
+.docs-brochure .page-wrapper{
+	-webkit-perspective:2000px;
+	-moz-perspective: 2000px;
+	-ms-perspective: 2000px;
+	perspective: 2000px;
+}
+
+
+.docs-brochure .loader{
+	background-image:url(../pics/loader.gif);
+	width:22px;
+	height:22px;
+	position:absolute;
+	top:280px;
+	left:219px;
+}
+
+.show-bar .docs-brochure .shadow{
+	-webkit-transition: -webkit-box-shadow 0.5s;
+	-moz-transition: -moz-box-shadow 0.5s;
+	-o-transition: -webkit-box-shadow 0.5s;
+	-ms-transition: -ms-box-shadow 0.5s;
+
+	-webkit-box-shadow:0 0 20px #ccc;
+	-moz-box-shadow:0 0 20px #ccc;
+	-o-box-shadow:0 0 20px #ccc;
+	-ms-box-shadow:0 0 20px #ccc;
+	box-shadow:0 0 20px #ccc;
+}
+
+.docs-brochure .tabs{
+	width:942px;
+	height:22px;
+	top:-22px;
+	position:relative;
+	z-index:1;
+}
+
+.docs-brochure .tabs > div{
+	width:461px;
+	height:22px;
+	float:left;
+}
+
+.docs-brochure .tabs .left{
+	text-align:left;
+	margin-left:10px;
+}
+
+
+.docs-brochure .tabs .right{
+	text-align:right;
+	margin-right:10px;
+}
+
+.docs-brochure .tabs a{
+	color:black;
+	-webkit-border-image: url(../pics/tab-off.png) 5 20 5 20 repeat stretch;
+	border-width: 5px 20px 5px 20px;
+	display:inline-block;
+	font:bold 11px arial;
+	text-shadow:1px 1px 0 #ddd;
+	color:#333;
+	line-height:12px;
+}
+
+.docs-brochure .tabs .on,
+.docs-brochure .tabs .on:hover{
+	-webkit-border-image: url(../pics/tab-on.png) 5 20 5 20 repeat stretch;
+	cursor:default;
+}
+
+.docs-brochure .tabs a:hover{
+	color:black;
+	text-decoration: none;
+	cursor:pointer;
+	-webkit-border-image: url(../pics/tab-hover.png) 5 20 5 20 repeat stretch;
+
+}

@@ -7,7 +7,7 @@
             
             </script>
 <meta utf="charset-8">
-<title>EXPLORE</title>
+<title>MAGVERSE - PATRIKA</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <!-- FB open graph -->
@@ -43,24 +43,20 @@
 <!-- <link rel="stylesheet" href="//akcdn.magzter.com/web/srz/assets/css/fonts.css"> -->
 <!-- <link rel="icon" href="//akcdn.magzter.com/web/favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="//akcdn.magzter.com/web/favicon.ico" type="image/x-icon" />
- --><link href="https://cdn.magzter.com/web/assets/viewer/reader/sample_style-v6.css" type="text/css" rel="stylesheet" />
-<!-- <link href="http://localhost/sample_style-v6.css" type="text/css" rel="stylesheet" /> -->
-<!-- <script type="text/javascript">
-    (function (i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function () {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+ -->
+ <link href="https://cdn.magzter.com/web/assets/viewer/reader/sample_style-v6.css" type="text/css" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/3.0.1/introjs.min.css" integrity="sha512-fsq7ym+bMq7ecs277R2a3QDPxF+JIwNNnkPfj9rIKDUyqrbXDnICZj/cCLcP3bKh3+jsCBnBR7BZJShOmELL0Q==" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/3.0.1/intro.min.js" integrity="sha512-Y3bwrs/uUQhiNsD26Mpr5YvfG18EY0J+aNxYI7ZQPJlM9H+lElGpuh/JURVJR/NBE+p1JZ+sVE773Un4zQcagg==" crossorigin="anonymous"></script>
 
-    ga('create', 'UA-46680689-14', 'auto');
-    ga('send', 'pageview');
-  </script> -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-XVHDDZ5X6E"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-XVHDDZ5X6E');
+</script>
+
 <style>
     #screenlayer {
         position: absolute;
@@ -771,6 +767,7 @@
     }
 
     #rotate{
+  cursor: pointer;
   vertical-align:top;
     transform:rotate(7deg);
   -ms-transform:rotate(90deg); /* IE 9 */
@@ -1209,34 +1206,30 @@
     <div id="canvas">
         
         <div class="readerTools">
+            <!-- <i class="fas fa-home" style=" padding-top: 30px; padding-left: 9px; font-size: 30px; cursor: pointer; color:gray" title="Home"></i> -->
             <div class="zoom-icon zoom-icon-in" title="Zoom In"></div>
             <div class="fa fa-thumbs-o-up like" style=" padding-top: 48px; padding-left: 9px; font-size: 30px; cursor: pointer; color:gray" title="Like"></div>
-            <span class="like-count" style="color:grey"></span>
-<!--             <div class="fullScreen-icon enter" title="Fullscreen"></div>
- -->            <div class="show-thumbnails" style="margin-top: 9px"title="Thumbnails"></div>
-        <div class="show-share" style="padding-top:9px;" title="Share">
+            <span class="like-count" style="color:grey"></span>            
+             <div class="show-thumbnails" style="margin-top: 36px"title="Thumbnails"></div>
+        <div class="home"  title="Home">
+            <a href="./dist/index.html"><i class="fa fa-home" style="font-size: 30px; color:gray; margin-top:9px; padding-left:7px;"></i></a>
+        </div>
+        <div class="show-share" style="padding-top:33px;" title="Share">
                 <i class="fa fa-share-alt" id="swShareBtn" title="Share" aria-hidden="true"></i>
-            <a href="#popup1" class="button-container" style="padding-left:1300px">
-            <input type="button" value="Subscribe" id="rotate"/>
-            </a>
+            
             <!-- <a class="btn btn-primary skip" href="#popup1" style="padding:6px 15px; background:#333; color:#fff; text-decoration:none; font-family:poppins; border-radius:3px; margin:25% 40%; display:inline-block;">OPEN POPUP</a> -->
                 <div id="share-tooltip">
-                    <a onclick="addThisStaticEventHandler('Facebook');"
-                        href="https://api.addthis.com/oexchange/0.8/forward/facebook/offer?url=`https://www.magzter.com/page_track/magenc/preview/$7237/$`;&amp;pubid=ra-5208e2cf54cfbd32&amp;ct=1&amp;pco=tbxnj-1.0"
-                        target="_blank">
-                        <i class="fa fa-facebook" id="swShare_FB" title="Facebook" aria-hidden="true"></i>
-                    </a>
                     <a onclick="addThisStaticEventHandler('Twitter');"
                         href="https://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=`https://www.magzter.com/page_track/magenc/preview/$7237/$`&amp;pubid=ra-5208e2cf54cfbd32&amp;ct=1&amp;title=Outlook SPLURGE - April 2016 </a> Digital Magazine from Magzter - World's Largest Digital Newsstand&amp;pco=tbxnj-1.0"
                         target="_blank">
                         <i class="fa fa-twitter" id="swShare_Tw" title="Twitter" aria-hidden="true"></i>
                     </a>
-                    <a onclick="addThisStaticEventHandler('Mail to Friend');"
-                        href="mailto:?&amp;subject=Outlook SPLURGE</a> from Magzter&amp;body=I%E2%80%99m%20sharing%20a%20premium%20magazine%20article%20from%20Magzter%20with%20you%20because%20I%20think%20you%E2%80%99ll%20really%20like%20it!%20-%20`https://www.magzter.com/page_track/magenc/preview/$7237/$`">
-                        <i class="fa fa-envelope-o" id="swShare_Mail" title="Mail to Friend" aria-hidden="true"></i>
-                    </a>
+                   
                 </div>
             </div>
+            <a href="#popup1" class="buttons" style="padding-left:1300px">
+            <input type="button" value="Subscribe" id="rotate"/>
+            </a>
         </div>
 
         <div class="overlay"></div>
@@ -1271,8 +1264,7 @@
             <form name="subscribe" id="subscribe_popup">
               <div>
                 <!-- <span class="required">*</span><span>Email</span>-->
-                <input type="text" value="" name="subscribe_pemail" id="subscribe_pemail">
-                <input type="hidden" value="" name="subscribe_pname" id="subscribe_pname">
+                <input type="text" placeholder ="johndoe@gmail.com" value="" name="subscribe_pemail" id="subscribe_pemail">
                 <div id="notification"></div>
                 <a class="button" onclick="email_subscribepopup()"><span>Submit</span></a> </div>
             </form>
@@ -1642,7 +1634,8 @@
 
             });
             //Button Function
-            $(".button-container").click(function(){
+            $(".buttons").click(function(){
+                
                 $("#popup1").css("display","block");
             });
 

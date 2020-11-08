@@ -4,15 +4,14 @@
         <head>
     
             <script type="text/javascript">
-            
+
             </script>
 <meta utf="charset-8">
 <title>MAGVERSE - PATRIKA</title>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 <!-- FB open graph -->
-<meta property="og:title"
-    content="EXPLORE" />
+<meta property="og:title" content="EXPLORE" />
 <meta property="og:type" content="website" />
 <meta property='og:image' content="https://imgur.com/VKT7EjJ.jpg" />
 <meta property="og:image:width" content="450" />
@@ -24,6 +23,43 @@
     content="Read Explore - Oct 2020 digital edition on your iPad, iPhone, Android Devices & web from MagVerse Digital Newsstand" />
 <!-- <META HTTP-EQUIV="Access-Control-Allow-Origin"
     CONTENT="https://akcdn.magzter.com/web/assets/newreader/extras/jquery-1.8.3.js"> -->
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2/dist/email.min.js"></script>
+<script type="text/javascript">
+    function goHome() {
+        window.location = "./mag.html";
+    }
+</script>
+<script type="text/javascript">
+    function sendEmail(event) {
+        event.preventDefault();
+        mail = document.getElementById("subscribe_pemail").value;
+        if (mail) {
+            emailjs
+                .sendForm(
+                    "service_8qtwsci",
+                    "template_dm5izpt",
+                    event.target,
+                    "user_YuS6GnKcxirrA8DbiQbV2"
+                )
+                .then(
+                    (result) => {
+                        console.log(result);
+                        if (result.text == "OK") {
+                            goHome();
+                        }
+                    },
+                    (error) => {
+                        console.log(error.text);
+                    }
+                );
+            event.target.reset();
+        }
+        else {
+            alert("Enter your email.")
+        }
+    }
+</script>
+
 <script type="text/javascript" src="https://akcdn.magzter.com/web/assets/newreader/extras/jquery-1.8.3.js"></script>
 <!--
             <script type="text/javascript" src="//akcdn.magzter.com/web/assets/newreader/extras/jquery-3.2.0.min.js"></script>
@@ -44,17 +80,21 @@
 <!-- <link rel="icon" href="//akcdn.magzter.com/web/favicon.ico" type="image/x-icon" />
 <link rel="shortcut icon" href="//akcdn.magzter.com/web/favicon.ico" type="image/x-icon" />
  -->
- <link href="https://cdn.magzter.com/web/assets/viewer/reader/sample_style-v6.css" type="text/css" rel="stylesheet"/>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/3.0.1/introjs.min.css" integrity="sha512-fsq7ym+bMq7ecs277R2a3QDPxF+JIwNNnkPfj9rIKDUyqrbXDnICZj/cCLcP3bKh3+jsCBnBR7BZJShOmELL0Q==" crossorigin="anonymous" />
-<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/3.0.1/intro.min.js" integrity="sha512-Y3bwrs/uUQhiNsD26Mpr5YvfG18EY0J+aNxYI7ZQPJlM9H+lElGpuh/JURVJR/NBE+p1JZ+sVE773Un4zQcagg==" crossorigin="anonymous"></script>
+<link href="https://cdn.magzter.com/web/assets/viewer/reader/sample_style-v6.css" type="text/css" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/3.0.1/introjs.min.css"
+    integrity="sha512-fsq7ym+bMq7ecs277R2a3QDPxF+JIwNNnkPfj9rIKDUyqrbXDnICZj/cCLcP3bKh3+jsCBnBR7BZJShOmELL0Q=="
+    crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intro.js/3.0.1/intro.min.js"
+    integrity="sha512-Y3bwrs/uUQhiNsD26Mpr5YvfG18EY0J+aNxYI7ZQPJlM9H+lElGpuh/JURVJR/NBE+p1JZ+sVE773Un4zQcagg=="
+    crossorigin="anonymous"></script>
 
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-XVHDDZ5X6E"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-XVHDDZ5X6E');
+    gtag('config', 'G-XVHDDZ5X6E');
 </script>
 
 <style>
@@ -80,8 +120,8 @@
     }
 
     /*.blurBG {*/
-        /*background: url("https://maghtml.magzter.com/data/7237/1462515692/thumb/thumb_1.jpg")*/ 
-      /*  background: url("https://imgur.com/VKT7EjJ.jpg") 
+    /*background: url("https://maghtml.magzter.com/data/7237/1462515692/thumb/thumb_1.jpg")*/
+    /*  background: url("https://imgur.com/VKT7EjJ.jpg") 
         no-repeat center center;
         background-size: contain;
 
@@ -101,7 +141,7 @@
         filter: blur(10px);
     }*/
 
-   /* .blurCover {
+    /* .blurCover {
         position: absolute;
         left: 0;
         right: 0;
@@ -766,169 +806,175 @@
         z-index: 11001;
     }
 
-    #rotate{
-  cursor: pointer;
-  vertical-align:top;
-    transform:rotate(7deg);
-  -ms-transform:rotate(90deg); /* IE 9 */
-  -moz-transform:rotate(90deg); /* Firefox */
-  -webkit-transform:rotate(90deg); /* Safari and Chrome */
-  -o-transform:rotate(90deg); /* Opera */
+    #rotate {
+        cursor: pointer;
+        vertical-align: top;
+        transform: rotate(7deg);
+        -ms-transform: rotate(90deg);
+        /* IE 9 */
+        -moz-transform: rotate(90deg);
+        /* Firefox */
+        -webkit-transform: rotate(90deg);
+        /* Safari and Chrome */
+        -o-transform: rotate(90deg);
+        /* Opera */
     }
-/*Subscribe Newsletter Modal*/
-@import url('https://fonts.googleapis.com/css?family=Poppins');
-.overlay {
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: rgba(0, 0, 0, 0.7);
-    transition: opacity 500ms;
-    visibility: hidden;
-    opacity: 0;
-    z-index: 9999;
-}
 
-.overlay:target {
-    visibility: visible;
-    opacity: 1;
-}
+    /*Subscribe Newsletter Modal*/
+    @import url('https://fonts.googleapis.com/css?family=Poppins');
 
-#popup1 {
-    font-family: poppins;
-}
+    .overlay {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: rgba(0, 0, 0, 0.7);
+        transition: opacity 500ms;
+        visibility: hidden;
+        opacity: 0;
+        z-index: 9999;
+    }
 
-#popup1 .popup {
-    margin: 0px auto;
-    padding: 50px 20px;
-    background: #fff;
-    border-radius: 0px;
-    height: 260px;
-    width: 690px;
-    position: relative;
-    text-align: center;
-    top: 50% !important;
-    position: fixed !important;
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    right: 0px;
-    left: 0;
-}
+    .overlay:target {
+        visibility: visible;
+        opacity: 1;
+    }
 
-#popup1 .popup h2 {
-    margin-top: 0;
-    color: #333;
-}
+    #popup1 {
+        font-family: poppins;
+    }
 
-#popup1 .popup .close {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    transition: all 200ms;
-    font-size: 30px;
-    font-weight: normal;
-    text-decoration: none;
-    text-align: center;
-    background: #333;
-    border-radius: 0;
-    cursor: pointer;
-    float: right;
-    padding: 0;
-    color: #fff;
-    margin-top: 0;
-    margin-right: 0;
-    height: 40px;
-    width: 40px;
-    line-height: 45px;
-}
+    #popup1 .popup {
+        margin: 0px auto;
+        padding: 50px 20px;
+        background: #fff;
+        border-radius: 0px;
+        height: 260px;
+        width: 690px;
+        position: relative;
+        text-align: center;
+        top: 50% !important;
+        position: fixed !important;
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+        right: 0px;
+        left: 0;
+    }
 
-#popup1 .popup .close:hover {
-    color: #f2ed0d;
-}
+    #popup1 .popup h2 {
+        margin-top: 0;
+        color: #333;
+    }
 
-#popup1 .popup .content {
-    max-height: 30%;
-    overflow: auto;
-}
+    #popup1 .popup .close {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+        transition: all 200ms;
+        font-size: 30px;
+        font-weight: normal;
+        text-decoration: none;
+        text-align: center;
+        background: #333;
+        border-radius: 0;
+        cursor: pointer;
+        float: right;
+        padding: 0;
+        color: #fff;
+        margin-top: 0;
+        margin-right: 0;
+        height: 40px;
+        width: 40px;
+        line-height: 45px;
+    }
 
-#popup1 .newletter-title h2 {
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #000;
-    font-weight: 700;
-    letter-spacing: 3px;
-    margin: 0 0 15px;
-}
+    #popup1 .popup .close:hover {
+        color: #f2ed0d;
+    }
 
-#popup1 .box-content label {
-    font-weight: 400;
-    max-width: 560px;
-    display: inline-block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    line-height: 26px;
-}
+    #popup1 .popup .content {
+        max-height: 30%;
+        overflow: auto;
+    }
 
-.newletter-popup {
-    background: #fff;
-    top: 50% !important;
-    position: fixed !important;
-    padding: 0;
-    text-align: center;
-    -moz-transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
-    -o-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
+    #popup1 .newletter-title h2 {
+        font-size: 24px;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: 700;
+        letter-spacing: 3px;
+        margin: 0 0 15px;
+    }
 
-#popup1 #frm_subscribe #subscribe_pemail {
-    background: #EBEBEB none repeat scroll 0% 0%;
-    border: medium none;
-    height: 40px;
-    width: 65%;
-    margin: 20px 0;
-    padding-left: 15px;
-}
+    #popup1 .box-content label {
+        font-weight: 400;
+        max-width: 560px;
+        display: inline-block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        line-height: 26px;
+    }
 
-#popup1 #frm_subscribe a {
-    cursor: pointer;
-    border: none;
-    background: #333;
-    padding: 3px 25px;
-    text-transform: uppercase;
-    font-size: 14px;
-    color: #fff;
-    font-weight: 600;
-    line-height: 34px;
-    display: inline-block;
-    border-radius: 0;
-    letter-spacing: 2px;
-}
+    .newletter-popup {
+        background: #fff;
+        top: 50% !important;
+        position: fixed !important;
+        padding: 0;
+        text-align: center;
+        -moz-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
 
-#popup1 .box-content .subscribe-bottom {
-    margin-top: 20px;
-}
+    #popup1 #frm_subscribe #subscribe_pemail {
+        background: #EBEBEB none repeat scroll 0% 0%;
+        border: medium none;
+        height: 40px;
+        width: 65%;
+        margin: 20px 0;
+        padding-left: 15px;
+    }
 
-#popup1 .box-content .subscribe-bottom #newsletter_popup_dont_show_again {
-    display: inline-block;
-    margin: 0;
-    vertical-align: middle;
-    margin-top: -1px;
-}
+    #popup1 #frm_subscribe a {
+        cursor: pointer;
+        border: none;
+        background: #333;
+        padding: 3px 25px;
+        text-transform: uppercase;
+        font-size: 14px;
+        color: #fff;
+        font-weight: 600;
+        line-height: 34px;
+        display: inline-block;
+        border-radius: 0;
+        letter-spacing: 2px;
+    }
 
-#popup1 .box-content .subscribe-bottom label {
-    margin: 0;
-    font-weight: 400;
-    max-width: 650px;
-    display: inline-block;
-    margin-bottom: 5px;
-    font-size: 12px;
-}
+    #popup1 .box-content .subscribe-bottom {
+        margin-top: 20px;
+    }
+
+    #popup1 .box-content .subscribe-bottom #newsletter_popup_dont_show_again {
+        display: inline-block;
+        margin: 0;
+        vertical-align: middle;
+        margin-top: -1px;
+    }
+
+    #popup1 .box-content .subscribe-bottom label {
+        margin: 0;
+        font-weight: 400;
+        max-width: 650px;
+        display: inline-block;
+        margin-bottom: 5px;
+        font-size: 12px;
+    }
 </style>
 <style>
     /*.searchMegz {position: absolute;z-index: 1002;height: 22px;top:-25px;left: 10px;}
@@ -1204,31 +1250,38 @@
 
 
     <div id="canvas">
-        
+
         <div class="readerTools">
             <!-- <i class="fas fa-home" style=" padding-top: 30px; padding-left: 9px; font-size: 30px; cursor: pointer; color:gray" title="Home"></i> -->
-            <div class="zoom-icon zoom-icon-in" title="Zoom In"></div>
-            <div class="fa fa-thumbs-o-up like" style=" padding-top: 48px; padding-left: 9px; font-size: 30px; cursor: pointer; color:gray" title="Like"></div>
-            <span class="like-count" style="color:grey"></span>            
-             <div class="show-thumbnails" style="margin-top: 36px"title="Thumbnails"></div>
-        <div class="home"  title="Home">
-            <a href="./dist/index.html"><i class="fa fa-home" style="font-size: 30px; color:gray; margin-top:9px; padding-left:7px;"></i></a>
-        </div>
-        <div class="show-share" style="padding-top:33px;" title="Share">
-                <i class="fa fa-share-alt" id="swShareBtn" title="Share" aria-hidden="true"></i>
+            <div class="home" title="Home">
+                <a href="./dist/index.html"><i class="fa fa-home"
+                        style="font-size: 30px; color:gray; padding-left:7px;"></i></a>
+            </div>
+            <div class="zoom-icon zoom-icon-in" style="margin-top:33px;" title="Zoom In"></div>
+            <div class="fa fa-thumbs-o-up like"
+                style=" padding-top: 48px; padding-left: 9px; font-size: 30px; cursor: pointer; color:gray"
+                title="Like"></div>
+            <span class="like-count" style="color:grey"></span>
             
-            <!-- <a class="btn btn-primary skip" href="#popup1" style="padding:6px 15px; background:#333; color:#fff; text-decoration:none; font-family:poppins; border-radius:3px; margin:25% 40%; display:inline-block;">OPEN POPUP</a> -->
+            <div class="show-thumbnails" style="margin-top: 36px" title="Thumbnails">
+                
+            </div>
+
+            <div class="show-share" style="padding-top:33px;">
+                <i class="fa fa-share-alt" id="swShareBtn" title="Share" aria-hidden="true"></i>
+
+                <!-- <a class="btn btn-primary skip" href="#popup1" style="padding:6px 15px; background:#333; color:#fff; text-decoration:none; font-family:poppins; border-radius:3px; margin:25% 40%; display:inline-block;">OPEN POPUP</a> -->
                 <div id="share-tooltip">
                     <a onclick="addThisStaticEventHandler('Twitter');"
                         href="https://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=`https://www.magzter.com/page_track/magenc/preview/$7237/$`&amp;pubid=ra-5208e2cf54cfbd32&amp;ct=1&amp;title=Outlook SPLURGE - April 2016 </a> Digital Magazine from Magzter - World's Largest Digital Newsstand&amp;pco=tbxnj-1.0"
                         target="_blank">
                         <i class="fa fa-twitter" id="swShare_Tw" title="Twitter" aria-hidden="true"></i>
                     </a>
-                   
+
                 </div>
             </div>
             <a href="#popup1" class="buttons" style="padding-left:1300px">
-            <input type="button" value="Subscribe" id="rotate"/>
+                <input type="button" value="Subscribe" id="rotate" />
             </a>
         </div>
 
@@ -1251,31 +1304,38 @@
         </div>
     </div>
     <div id="popup1" class="overlay">
-  <div class="popup"> <a class="close" href="#">&times;</a>
-    <div id="dialog" class="window">
-      
-      <div class="box">
-        <div class="newletter-title">
-          <h2>Subscribe to our Featured Magazine</h2>
+        <div class="popup"> <a class="close" href="#">&times;</a>
+            <div id="dialog" class="window">
+
+                <div class="box">
+                    <div class="newletter-title">
+                        <h2>Subscribe to our Featured Magazine</h2>
+                    </div>
+                    <div class="box-content newleter-content">
+                        <label>Subscribe to our newsletters now and stay up-to-date with new collections, the latest
+                            lookbooks and exclusive magazines.</label>
+                        <div id="frm_subscribe">
+                            <form name="subscribe" id="subscribe_popup" onsubmit="sendEmail(event)">
+                                <div>
+                                    <!-- <span class="required">*</span><span>Email</span>-->
+                                    <input placeholder="johndoe@gmail.com" type="email" value="" name="email" id="subscribe_pemail">
+                                    <input type="hidden" value="" name="subscribe_pname" id="subscribe_pname">
+                                    <div id="notification"></div>
+                                    <!-- <a class="button" onclick=""><span>Submit</span></a> -->
+                                    <input type="submit" style="padding: 15px 15px;  text-align: center; text-transform: uppercase;font-size: 15px; font-family: 'Hind';
+                                    letter-spacing: 2px; cursor: pointer;
+                                        background-color: #272727; color: white;" class="" onclick=""
+                                        value="Subscribe">
+                                </div>
+                            </form>
+                        </div>
+                        <!-- /#frm_subscribe -->
+                    </div>
+                    <!-- /.box-content -->
+                </div>
+            </div>
         </div>
-        <div class="box-content newleter-content">
-          <label>Subscribe to our newsletters now and stay up-to-date with new collections, the latest lookbooks and exclusive magazines.</label>
-          <div id="frm_subscribe">
-            <form name="subscribe" id="subscribe_popup">
-              <div>
-                <!-- <span class="required">*</span><span>Email</span>-->
-                <input type="text" placeholder ="johndoe@gmail.com" value="" name="subscribe_pemail" id="subscribe_pemail">
-                <div id="notification"></div>
-                <a class="button" onclick="email_subscribepopup()"><span>Submit</span></a> </div>
-            </form>
-        </div>
-          <!-- /#frm_subscribe -->
-        </div>
-        <!-- /.box-content -->
-      </div>
     </div>
-  </div>
-</div>
 
     <div id="loader"></div>
 
@@ -1294,14 +1354,11 @@
             background: #2c2c2c;
             z-index: 10000;
         }
-        
-        
-        
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.js"></script>
     <script type="text/javascript" src="https://akcdn.magzter.com/web/assets/js/jquery.jcryption.3.0.1.js"></script>
     <script>
-       
+
         // var password = $.jCryption.encrypt("XXXX", "turbo");
         // $.jCryption.authenticate(password, "https://www.magzter.com/page_track_v2/magenc?pk=1",
         //     "https://www.magzter.com/page_track_v2/magenc?hs=1",
@@ -1311,118 +1368,118 @@
         //     function () {
         //         console.log("Authentication failed");
         //     });
-    var d = new Date();
-    var hhour = d.getHours();
-    var day = d.getDay();
-    if('0' != 100){
-    let query = {
-      magid: '7237',
-      magname: 'Outlook SPLURGE',
-      maglang: 'English',
-      priCat: '12',
-      secCat : '0',
-      magCon: 'IN',
-      isGold: '1',
-      issid: '165107',
-      uid: '15860691',
-      readtype: '5',
-      device: "web",
-      os: "web",
-      con: 'IN',
-      formattype: "1",
-      orientation: "Landscape",
-      isinteractive: "0",
-      gender: "0",
-      App: "Magzter",
-      ageRate: '3',
-      isnewsstand: '0',
-      islatest: "0",
-      hour: d.getHours(),
-      day: d.getDay(),
-      clevertap_id:'62deb176d8754ffeb173df8075b8e049'
-    }
+        var d = new Date();
+        var hhour = d.getHours();
+        var day = d.getDay();
+        if ('0' != 100) {
+            let query = {
+                magid: '7237',
+                magname: 'Outlook SPLURGE',
+                maglang: 'English',
+                priCat: '12',
+                secCat: '0',
+                magCon: 'IN',
+                isGold: '1',
+                issid: '165107',
+                uid: '15860691',
+                readtype: '5',
+                device: "web",
+                os: "web",
+                con: 'IN',
+                formattype: "1",
+                orientation: "Landscape",
+                isinteractive: "0",
+                gender: "0",
+                App: "Magzter",
+                ageRate: '3',
+                isnewsstand: '0',
+                islatest: "0",
+                hour: d.getHours(),
+                day: d.getDay(),
+                clevertap_id: '62deb176d8754ffeb173df8075b8e049'
+            }
 
-        var socket;
-        var pending_pages = [];
+            var socket;
+            var pending_pages = [];
 
-        function connect() {
-            if (!"WebSocket" in window) {
-                console.error("WebSocket is not supported by your Browser!");
-                return;
+            function connect() {
+                if (!"WebSocket" in window) {
+                    console.error("WebSocket is not supported by your Browser!");
+                    return;
+                }
+                if (socket && socket.readyState == WebSocket.OPEN) {
+                    return;
+                }
+                // Let us open a web socket
+                socket = new WebSocket("wss://analytics.magzter.com?" + $.param(query));
+                socket.onerror = function (err) {
+                    console.error(err);
+                }
+                socket.onopen = function (err) {
+                    pending_pages.forEach(page => {
+                        socket.send(JSON.stringify({
+                            action: "pagestream",
+                            page: page
+                        }));
+                    })
+                    pending_pages = [];
+                }
+                socket.onclose = function (err) {
+                    console.error("DISCONNECTED");
+                }
+                socket.onmessage = function (reason) {
+                    console.error(reason);
+                }
             }
-            if (socket && socket.readyState == WebSocket.OPEN) {
-                return;
+
+            $(window).on('pagehide', windowBlurred);
+            $(window).on('pageshow', windowFocused);
+            $(window).on('blur', windowBlurred);
+            $(window).on('focus', windowFocused);
+
+            let socketTimeout;
+
+            function windowBlurred() {
+                if (socketTimeout) {
+                    clearTimeout(socketTimeout);
+                }
+                socketTimeout = setTimeout(function () {
+                    socket.close()
+                }, 60000)
             }
-            // Let us open a web socket
-            socket = new WebSocket("wss://analytics.magzter.com?" + $.param(query));
-            socket.onerror = function (err) {
-                console.error(err);
+
+            function windowFocused() {
+                if (socketTimeout) {
+                    clearTimeout(socketTimeout);
+                }
+                if (socket && (socket.readyState == WebSocket.CLOSING || socket.readyState == WebSocket.CLOSED)) {
+                    connect();
+                }
             }
-            socket.onopen = function (err) {
-                pending_pages.forEach(page => {
+            connect();
+
+            function trackPage(page, pos) {
+                let Page_no = [page];
+                if (pos === 'l') {
+                    pos = 2;//page+1
+                    Page_no.push(page + 1);
+                }
+                else {
+                    pos = 1;
+                }
+                Page_no = Page_no.join(",");
+                if (!socket || socket.readyState != WebSocket.OPEN) {
+                    pending_pages.push(Page_no);
+                } else {
                     socket.send(JSON.stringify({
                         action: "pagestream",
-                        page: page
+                        page: Page_no,
+                        pos: pos
                     }));
-                })
-                pending_pages = [];
-            }
-            socket.onclose = function (err) {
-                console.error("DISCONNECTED");
-            }
-            socket.onmessage = function (reason) {
-                console.error(reason);
+                }
+
             }
         }
-
-        $(window).on('pagehide', windowBlurred);
-        $(window).on('pageshow', windowFocused);
-        $(window).on('blur', windowBlurred);
-        $(window).on('focus', windowFocused);
-
-        let socketTimeout;
-
-        function windowBlurred() {
-            if (socketTimeout) {
-                clearTimeout(socketTimeout);
-            }
-            socketTimeout = setTimeout(function () {
-                socket.close()
-            }, 60000)
-        }
-
-        function windowFocused() {
-            if (socketTimeout) {
-                clearTimeout(socketTimeout);
-            }
-            if (socket && (socket.readyState == WebSocket.CLOSING || socket.readyState == WebSocket.CLOSED)) {
-                connect();
-            }
-        }
-        connect();
-
-        function trackPage(page, pos) {
-            let Page_no=[page];
-            if(pos === 'l'){
-                pos =2;//page+1
-                Page_no.push(page+1);
-            }
-            else{
-                pos =1;
-            }
-            Page_no = Page_no.join(",");
-            if (!socket || socket.readyState != WebSocket.OPEN) {
-                pending_pages.push(Page_no);
-            } else {
-                socket.send(JSON.stringify({
-                    action: "pagestream",
-                    page: Page_no,
-                    pos: pos
-                }));
-            }
-
-        }
-    }
 
         // function trackPage(page, pos) {
         //     console.log(page);
@@ -1446,9 +1503,9 @@
 
         $(window).load(function () {
             $("#loader").hide();
-            
+
         });
-      
+
 
         // var userIsEditingSomething; // set this if something crazy happens
         //     oldOnBeforeUnload = window.onbeforeunload;
@@ -1541,13 +1598,13 @@
         document.addEventListener("DOMContentLoaded", function (event) {
             //close event
             /*$(window).bind("beforeunload", function() {
-            	track_beforeunload();
+                track_beforeunload();
                 return confirm("Do you really want to close.?");
             });*/
 
         });
 
-         
+
 
         // function track_beforeunload() {
         //     $.ajax({
@@ -1626,17 +1683,17 @@
             });
             //Like-Button Function
             var likeCount = 0;
-            $(".like").click( function() {
-               $(".like").removeClass("fa-thumbs-o-up");
-               $(".like").addClass("fa-thumbs-up");
-               likeCount++;
-               $(".like-count").html(likeCount);
+            $(".like").click(function () {
+                $(".like").removeClass("fa-thumbs-o-up");
+                $(".like").addClass("fa-thumbs-up");
+                likeCount++;
+                $(".like-count").html(likeCount);
 
             });
             //Button Function
-            $(".buttons").click(function(){
-                
-                $("#popup1").css("display","block");
+            $(".buttons").click(function () {
+
+                $("#popup1").css("display", "block");
             });
 
 
@@ -1724,7 +1781,7 @@
 
                  var data2 = $.parseJSON(msg);*/
 
-            noOfPages = '10';
+            noOfPages = '11';
             noOfPages = Number(noOfPages) + 1;
 
             var image1 = new Image();
@@ -1811,22 +1868,22 @@
                                 var li_d = $(".thumbHTML").find(".page-" + thumb_After).parent()
                                     .clone();
                                 var li_d2 = $(li_d).html("<img src='" + (adData.interactives[
-                                            key].thumb == "" ?
-                                        "https://akcdn.magzter.com/web/assets/images/ad_thumb.jpeg" :
-                                        adData.interactives[key].thumb) + "' class='page-" +
+                                    key].thumb == "" ?
+                                    "https://akcdn.magzter.com/web/assets/images/ad_thumb.jpeg" :
+                                    adData.interactives[key].thumb) + "' class='page-" +
                                     thumb_After + " showAd_thumb' data-pageAfter='" +
                                     thumb_After + "' data-campId='" + adData.interactives[
                                         key].campid + "' data-adId='" + adData.interactives[
-                                        key].aid + "' data-cinterId='" + adData
-                                    .interactives[
-                                        key].interid + "' data-adURL='" + adData
-                                    .interactives[
-                                        key].unzippath + "/index.html?campid=" + adData
-                                    .interactives[
-                                        key].campid + "&interid=" + adData.interactives[key]
-                                    .interid + "&magid=" + '7237' +
+                                            key].aid + "' data-cinterId='" + adData
+                                                .interactives[
+                                                key].interid + "' data-adURL='" + adData
+                                                    .interactives[
+                                                    key].unzippath + "/index.html?campid=" + adData
+                                                        .interactives[
+                                                        key].campid + "&interid=" + adData.interactives[key]
+                                        .interid + "&magid=" + '7237' +
                                     "&platform=web'/><span>" + adData.interactives[key]
-                                    .title +
+                                        .title +
                                     "</span>");
                                 $(".thumbHTML").find(".page-" + thumb_After).parent().after(
                                     li_d2);
@@ -1864,7 +1921,7 @@
                 for (var i = 0; i < '15'; i++) {
                     obj[i + 1] = array[i];
                 }
-                getThumb     = obj;
+                getThumb = obj;
             } else {
                 for (var i = 1; i <= '15'; i++) {
                     obj[i] = i;
@@ -2164,7 +2221,7 @@
                     return v.page_no == page;
                 });
 
-                //	links = linkSet[page];
+                //  links = linkSet[page];
                 if (links != undefined) {
                     $.each(links.link, function (key, region) {
                         addRegion(region, element, links.image_width, links.image_height);
@@ -2332,7 +2389,7 @@
                             if (goFurther) {
                                 $("#screenlayer").hide();
                                 randomTxt = randomString(6,
-                                        '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ') +
+                                    '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ') +
                                     Number(new Date());
                                 $(".ad1").remove();
 
@@ -2349,10 +2406,10 @@
                                     } else {
                                         $(".page-wrapper[page='" + pgBefore + "'], .page-wrapper[page='" +
                                             pgBefore + "']:hidden").after(
-                                            "<div class='ad1' id='adID' style='width: 100%;height: 100%;background: #000;z-index: 1000000;position: absolute; visibility: hidden;'><iframe src='" +
-                                            get_adURL + "&ranTxt=" + randomTxt +
-                                            "' id='p2Ad' width='100%' height='100%'></iframe><div id='skipTo'>Skip</div></div>"
-                                        );
+                                                "<div class='ad1' id='adID' style='width: 100%;height: 100%;background: #000;z-index: 1000000;position: absolute; visibility: hidden;'><iframe src='" +
+                                                get_adURL + "&ranTxt=" + randomTxt +
+                                                "' id='p2Ad' width='100%' height='100%'></iframe><div id='skipTo'>Skip</div></div>"
+                                            );
                                     }
                                     //  console.log(page +" - pgAfter: "+ pgAfter +" - pgBefore: "+ pgBefore);
 
@@ -2457,12 +2514,12 @@
                         setTimeout(function () {
                             $(".region").css("opacity", "0.0");
                         }, 2500)
-                        if('0' != 100) {
+                        if ('0' != 100) {
                             if (window.matchMedia("(orientation: portrait)").matches) {
-                            trackPage(page, "p");
-                        } else {
-                            trackPage(page, "l");
-                        }
+                                trackPage(page, "p");
+                            } else {
+                                trackPage(page, "l");
+                            }
                         }
                     },
                     missing: function (event, pages) {
@@ -3035,11 +3092,11 @@
                             $('<div />', {
                                 'class': 'exit-message'
                             }).html('<div>Press ESC to exit</div>').appendTo($('body')).
-                            delay(2000).animate({
-                                opacity: 0
-                            }, 500, function () {
-                                $(this).remove();
-                            });
+                                delay(2000).animate({
+                                    opacity: 0
+                                }, 500, function () {
+                                    $(this).remove();
+                                });
                         }
                     },
                     zoomOut: function () {
@@ -3174,18 +3231,18 @@
                 }
             });
             $('.thumbnails li').
-            bind($.mouseEvents.over, function () {
-                $(this).addClass('thumb-hover');
-            }).bind($.mouseEvents.out, function () {
-                $(this).removeClass('thumb-hover');
-            });
+                bind($.mouseEvents.over, function () {
+                    $(this).addClass('thumb-hover');
+                }).bind($.mouseEvents.out, function () {
+                    $(this).removeClass('thumb-hover');
+                });
 
             if ($.isTouch) {
 
                 $('.thumbnails').addClass('thumbanils-touch').
-                bind($.mouseEvents.move, function (event) {
-                    event.preventDefault();
-                });
+                    bind($.mouseEvents.move, function (event) {
+                        event.preventDefault();
+                    });
 
             } else {
                 $('.thumbnails ul').mouseover(function () {
@@ -3307,7 +3364,7 @@
         (function ($) {
 
             function ReaderSearch(options) {
-                this.noop = function () {};
+                this.noop = function () { };
                 this._isOpen = false;
                 this.query = '';
                 this.result = {};

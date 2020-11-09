@@ -59,7 +59,45 @@
         }
     }
 </script>
+<script>
+    function displayLikes() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var data = this.responseText;
+                var likes;
+                likes = JSON.parse(data)[0].likes;
+                document.getElementById("likes-count").innerHTML = likes;
 
+            }
+        }
+        xhttp.open("GET", "https://backem.glitch.me/likes", true);
+        xhttp.send();
+        setTimeout("displayLikes()", 1000)
+    }
+
+    function incrementLikes() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("PUT", "https://backem.glitch.me/likes/1", true);
+        xhttp.setRequestHeader("Content-type", "application/json; charset=utf-8");
+        xhttp.onreadystatechange = function () {
+            if (this.readyState == 4 && this.status == 200) {
+                var data = this.responseText;
+                // console.log(data)
+                var likes;
+                console.log(likes = JSON.parse(data).likes);
+                // document.getElementById("likes-count").innerHTML = likes;
+            }
+        }
+        likes = parseInt(document.getElementById("likes-count").innerHTML);
+        var data = { "likes": likes + 1 };
+        var json = JSON.stringify(data);
+        console.log(json);
+        xhttp.send(json);
+
+    }
+
+</script>
 <script type="text/javascript" src="https://akcdn.magzter.com/web/assets/newreader/extras/jquery-1.8.3.js"></script>
 <!--
             <script type="text/javascript" src="//akcdn.magzter.com/web/assets/newreader/extras/jquery-3.2.0.min.js"></script>
@@ -1246,7 +1284,7 @@
 </script>
 </head>
 
-<body>
+<body onload="displayLikes()">
 
 
     <div id="canvas">
@@ -1259,12 +1297,12 @@
             </div>
             <div class="zoom-icon zoom-icon-in" style="margin-top:33px;" title="Zoom In"></div>
             <div class="fa fa-thumbs-o-up like"
-                style=" padding-top: 48px; padding-left: 9px; font-size: 30px; cursor: pointer; color:gray"
-                title="Like"></div>
-            <span class="like-count" style="color:grey"></span>
-            
+                style=" padding-top: 48px; padding-left: 9px; font-size: 30px; cursor: pointer; color:gray" title="Like"
+                onclick="incrementLikes()"></div>
+            <span id="likes-count" style="color:grey"></span>
+
             <div class="show-thumbnails" style="margin-top: 36px" title="Thumbnails">
-                
+
             </div>
 
             <div class="show-share" style="padding-top:33px;">
@@ -1318,7 +1356,8 @@
                             <form name="subscribe" id="subscribe_popup" onsubmit="sendEmail(event)">
                                 <div>
                                     <!-- <span class="required">*</span><span>Email</span>-->
-                                    <input placeholder="johndoe@gmail.com" type="email" value="" name="email" id="subscribe_pemail">
+                                    <input placeholder="johndoe@gmail.com" type="email" value="" name="email"
+                                        id="subscribe_pemail">
                                     <input type="hidden" value="" name="subscribe_pname" id="subscribe_pname">
                                     <div id="notification"></div>
                                     <!-- <a class="button" onclick=""><span>Submit</span></a> -->
@@ -1682,14 +1721,14 @@
 
             });
             //Like-Button Function
-            var likeCount = 0;
-            $(".like").click(function () {
-                $(".like").removeClass("fa-thumbs-o-up");
-                $(".like").addClass("fa-thumbs-up");
-                likeCount++;
-                $(".like-count").html(likeCount);
+            // var likeCount = 0;
+            // $(".like").click(function () {
+            //     $(".like").removeClass("fa-thumbs-o-up");
+            //     $(".like").addClass("fa-thumbs-up");
+            //     likeCount++;
+            //     $(".like-count").html(likeCount);
 
-            });
+            // });
             //Button Function
             $(".buttons").click(function () {
 

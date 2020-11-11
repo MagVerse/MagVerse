@@ -1292,7 +1292,7 @@
         <div class="readerTools">
             <!-- <i class="fas fa-home" style=" padding-top: 30px; padding-left: 9px; font-size: 30px; cursor: pointer; color:gray" title="Home"></i> -->
             <div class="home" title="Home">
-                <a href="./dist/index.html"><i class="fa fa-home"
+                <a href="./index.html"><i class="fa fa-home"
                         style="font-size: 30px; color:gray; padding-left:7px;"></i></a>
             </div>
             <div class="zoom-icon zoom-icon-in" style="margin-top:33px;" title="Zoom In"></div>
@@ -1310,19 +1310,16 @@
 
                 <!-- <a class="btn btn-primary skip" href="#popup1" style="padding:6px 15px; background:#333; color:#fff; text-decoration:none; font-family:poppins; border-radius:3px; margin:25% 40%; display:inline-block;">OPEN POPUP</a> -->
                 <div id="share-tooltip">
-                    <a onclick="addThisStaticEventHandler('Twitter');"
-                        href="https://api.addthis.com/oexchange/0.8/forward/twitter/offer?url=`https://www.magzter.com/page_track/magenc/preview/$7237/$`&amp;pubid=ra-5208e2cf54cfbd32&amp;ct=1&amp;title=Outlook SPLURGE - April 2016 </a> Digital Magazine from Magzter - World's Largest Digital Newsstand&amp;pco=tbxnj-1.0"
-                        target="_blank">
-                        <i class="fa fa-twitter" id="swShare_Tw" title="Twitter" aria-hidden="true"></i>
+                    <a onclick="copy_link()">
+                        <i class="fa fa-link" id="swShare_Tw" title="Copy Link" aria-hidden="true"></i>
                     </a>
-
                 </div>
             </div>
             <a href="#popup1" class="buttons" style="padding-left:1300px">
                 <input type="button" value="Subscribe" id="rotate" />
             </a>
         </div>
-
+        <input type="text" value="" id="myInput" style="display:none;">
         <div class="overlay"></div>
         <div class="magazine-viewport" style="z-index: 999;">
             <div class="container">
@@ -3654,6 +3651,14 @@
         })($);
     </script>
     <script>
+        function copy_link(){
+  document.getElementById("myInput").setAttribute("value",window.location.pathname)
+  var copyText = document.getElementById("myInput");
+  copyText.select();
+  copyText.setSelectionRange(0, 99999)
+  document.execCommand("copy");
+  alert("Link Copied To Clipboard");
+        }
         // function addThisStaticEventHandler(evt) {
         //     clevertap.event.push("Share", {
         //         "Platform": evt,

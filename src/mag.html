@@ -71,14 +71,14 @@
 
             }
         }
-        xhttp.open("GET", "https://backem.glitch.me/likes", true);
+        xhttp.open("GET", "https://magverse.herokuapp.com/likes", true);
         xhttp.send();
         setTimeout("displayLikes()", 1000)
     }
 
     function incrementLikes() {
         var xhttp = new XMLHttpRequest();
-        xhttp.open("PUT", "https://backem.glitch.me/likes/1", true);
+        xhttp.open("PUT", "https://magverse.herokuapp.com/likes/1", true);
         xhttp.setRequestHeader("Content-type", "application/json; charset=utf-8");
         xhttp.onreadystatechange = function () {
             if (this.readyState == 4 && this.status == 200) {

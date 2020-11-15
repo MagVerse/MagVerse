@@ -1,3 +1,4 @@
+<link rel="shortcut icon" href="pics/favicon.ico" type="icon">
 <script id="handlebars-demo" type="text/x-handlebars-template">
     <!doctype html>
     <html style="height:100% !important;">
@@ -68,7 +69,20 @@
                 var likes;
                 likes = JSON.parse(data)[0].likes;
                 document.getElementById("likes-count").innerHTML = likes;
+                if (localStorage.getItem("likes") !== null) {
+                    localStorage.likes = likes;
 
+                } else {
+                    localStorage.setItem("likes", likes)
+                }
+            }
+            else {
+                if (localStorage.getItem("likes") !== null) {
+                    document.getElementById("likes-count").innerHTML = parseInt(localStorage.likes);
+                } else {
+                    localStorage.setItem("likes", 15);
+                    document.getElementById("likes-count").innerHTML = parseInt(localStorage.likes);
+                }
             }
         }
         xhttp.open("GET", "https://magverse.herokuapp.com/likes", true);
@@ -85,11 +99,17 @@
                 var data = this.responseText;
                 // console.log(data)
                 var likes;
-                console.log(likes = JSON.parse(data).likes);
+                // console.log(likes = JSON.parse(data).likes);
                 // document.getElementById("likes-count").innerHTML = likes;
+
             }
         }
-        likes = parseInt(document.getElementById("likes-count").innerHTML);
+        // likes = parseInt(document.getElementById("likes-count").innerHTML);
+        if (localStorage.getItem("likes") !== null) {
+            likes = parseInt(localStorage.likes);
+            console.log(likes);
+        }
+        localStorage.setItem("likes", likes + 1)
         var data = { "likes": likes + 1 };
         var json = JSON.stringify(data);
         console.log(json);
@@ -3651,15 +3671,15 @@
         })($);
     </script>
     <script>
-        function copy_link(){
-  document.getElementById("myInput").setAttribute("value",window.location.pathname)
-  var copyText = document.getElementById("myInput");
-  copyText.select();
-  copyText.setSelectionRange(0, 99999)
-  document.execCommand("copy");
-  alert("Link Copied To Clipboard");
+        function copy_link() {
+            document.getElementById("myInput").setAttribute("value", window.location.pathname)
+            var copyText = document.getElementById("myInput");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999)
+            document.execCommand("copy");
+            alert("Link Copied To Clipboard");
         }
-      
+
     </script>
 </body>
 
